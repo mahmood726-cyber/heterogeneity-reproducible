@@ -1,10 +1,10 @@
 {
  "mode": "full",
- "all_ok": true,
- "when": "2026-10-07 22:05 UTC",
- "sha": "4d8b7bca1bf32f780509d0f6d91a9431330f949f",
- "run_id": "37692506585",
- "run_url": "https://github.com/mahmood726-cyber/heterogeneity-reproducible/actions/runs/37692506585",
+ "all_ok": false,
+ "when": "2026-10-07 22:13 UTC",
+ "sha": "dd821ff2bb24da0ae620286ec70f07b2e3280294",
+ "run_id": "37694013733",
+ "run_url": "https://github.com/mahmood726-cyber/heterogeneity-reproducible/actions/runs/37694013733",
  "platforms": [
   {
    "platform": "Docker (canonical)",
@@ -21,8 +21,8 @@
   {
    "platform": "Windows",
    "artifact": "full-windows-latest",
-   "ok": true,
-   "summary": "44/44 numbers reproduced"
+   "ok": null,
+   "summary": "no report (run did not finish)"
   },
   {
    "platform": "macOS",
@@ -31,6 +31,6 @@
    "summary": "44/44 numbers reproduced"
   }
  ],
- "compare": "success",
+ "compare": "failure",
  "mode_note": "Full validation: every number in the paper."
 }
