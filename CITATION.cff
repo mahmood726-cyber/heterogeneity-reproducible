@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+title: "Heterogeneity in meta-analysis in the browser: a tool validated against the R package metafor"
+message: "If you use this software or validation, please cite it using the metadata below, and cite metafor, metadat and the original dataset authors."
+type: software
+authors:
+  - family-names: Ahmad
+    given-names: Mahmood
+repository-code: "https://github.com/mahmood726-cyber/heterogeneity-reproducible"
+license: MIT
+version: 1.0.0
+keywords:
+  - meta-analysis
+  - heterogeneity
+  - between-study variance
+  - metafor
+  - software validation
+  - reproducibility
+references:
+  - type: software
+    title: "allmeta — open browser-only tools for evidence synthesis"
+    authors:
+      - family-names: Ahmad
+        given-names: Mahmood
+    repository-code: "https://github.com/mahmood726-cyber/allmeta"
+  - type: software
+    title: "metafor: Meta-Analysis Package for R"
+    version: "5.2-1"
+    authors:
+      - family-names: Viechtbauer
+        given-names: Wolfgang
+    doi: 10.32614/CRAN.package.metafor
+  - type: software
+    title: "metadat: Meta-Analysis Datasets"
+    version: "1.6-0"
+    authors:
+      - family-names: Viechtbauer
+        given-names: Wolfgang
+      - family-names: White
+        given-names: Thomas
+      - family-names: Noble
+        given-names: Daniel
+      - family-names: Senior
+        given-names: Alistair
+      - family-names: Hamilton
+        given-names: W. Kyle
+    doi: 10.32614/CRAN.package.metadat

@@ -1,0 +1,35 @@
+{
+  "title": "Heterogeneity in meta-analysis in the browser: a tool validated against the R package metafor",
+  "description": "The allmeta heterogeneity app (validated at allmeta commit 7cb5975, the merge of PR #82) and a one-command validation against the R package metafor 5.2-1 on every random- or fixed-effects model without moderators fitted in the help-page examples of metadat 1.6-0: 88 meta-analyses from 49 datasets (2,241 study rows, 4 to 160 studies), each with all eight tau^2 estimators the app offers (Paule-Mandel, REML, ML, empirical Bayes, Sidik-Jonkman, Hedges, Hunter-Schmidt, DerSimonian-Laird). The app reports Q, I^2 with Q-profile confidence intervals for tau^2 and I^2, the pooled estimate with normal and Hartung-Knapp-Sidik-Jonkman intervals, the prediction interval, leave-one-out results and a Baujat plot. All 131,781 checks pass: every reported number agrees with metafor within 1e-9 and both treat the same 28 analyses as refused (DerSimonian-Laird with fewer than 10 studies). Includes the corpus builder, the committed corpus, the metafor reference analyses, the runner that drives the app itself in headless Chromium, the analysis that regenerates the article's tables, figures and statistics with a PASS/FAIL check of every number, a Docker image (canonical environment: R 4.6.0, metafor 5.2-1, metadat 1.6-0, Node 24.15.0, Playwright 1.63.0) and CI on Linux, Windows, macOS and Docker. Earlier app versions had known issues, fixed in allmeta PR #82 (see CHANGELOG.md).",
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Ahmad, Mahmood"
+    }
+  ],
+  "keywords": [
+    "meta-analysis",
+    "heterogeneity",
+    "between-study variance",
+    "prediction interval",
+    "Hartung-Knapp",
+    "metafor",
+    "software validation",
+    "reproducibility",
+    "browser"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/mahmood726-cyber/heterogeneity-reproducible",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://github.com/mahmood726-cyber/allmeta",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    }
+  ]
+}

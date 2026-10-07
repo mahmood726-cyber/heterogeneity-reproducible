@@ -1,0 +1,215 @@
+{
+ "source": "reproduce.py full run",
+ "numbers": [
+  {
+   "quantity": "tau^2 estimators",
+   "printed": "eight",
+   "stats_key": "estimators",
+   "value": 8
+  },
+  {
+   "quantity": "Meta-analyses in the corpus",
+   "printed": "88",
+   "stats_key": "meta_analyses",
+   "value": 88
+  },
+  {
+   "quantity": "metadat datasets contributing",
+   "printed": "49",
+   "stats_key": "pages_contributing",
+   "value": 49
+  },
+  {
+   "quantity": "Fewest studies in a meta-analysis",
+   "printed": "4",
+   "stats_key": "k_min",
+   "value": 4
+  },
+  {
+   "quantity": "Most studies in a meta-analysis",
+   "printed": "160",
+   "stats_key": "k_max",
+   "value": 160
+  },
+  {
+   "quantity": "Study rows",
+   "printed": "2,241",
+   "stats_key": "studies_total",
+   "value": 2241
+  },
+  {
+   "quantity": "Effect measures",
+   "printed": "23",
+   "stats_key": "measures",
+   "value": 23
+  },
+  {
+   "quantity": "Help pages that exceeded the time limit",
+   "printed": "two",
+   "stats_key": "pages_timed_out",
+   "value": 2
+  },
+  {
+   "quantity": "Analyses (meta-analyses x estimators)",
+   "printed": "704",
+   "stats_key": "configurations",
+   "value": 704
+  },
+  {
+   "quantity": "Checks",
+   "printed": "131,781",
+   "stats_key": "checks_total",
+   "value": 131781
+  },
+  {
+   "quantity": "Checks passed",
+   "printed": "131,781",
+   "stats_key": "checks_passed",
+   "value": 131781
+  },
+  {
+   "quantity": "The check count as the paper defines it",
+   "printed": "yes",
+   "stats_key": "check_formula_holds",
+   "value": 1
+  },
+  {
+   "quantity": "Analyses refused by both (DL, k < 10)",
+   "printed": "28",
+   "stats_key": "dl_refused",
+   "value": 28
+  },
+  {
+   "quantity": "Analyses compared",
+   "printed": "676",
+   "stats_key": "configurations_compared",
+   "value": 676
+  },
+  {
+   "quantity": "Every difference below 5e-10",
+   "printed": "yes",
+   "stats_key": "all_below_5e-10",
+   "value": 1
+  },
+  {
+   "quantity": "Estimates and intervals below 1e-10",
+   "printed": "yes",
+   "stats_key": "estimates_below_1e-10",
+   "value": 1
+  },
+  {
+   "quantity": "Displayed numbers that matched",
+   "printed": "120,720",
+   "stats_key": "displayed_numbers",
+   "value": 120720
+  },
+  {
+   "quantity": "Displayed numbers that did not match",
+   "printed": "0",
+   "stats_key": "displayed_fail",
+   "value": 0
+  },
+  {
+   "quantity": "metafor default controls move tau^2 by up to 1e-4 (between 1e-5 and 1e-4)",
+   "printed": "yes",
+   "stats_key": "metafor_default_between_1e-5_and_1e-4",
+   "value": 1
+  },
+  {
+   "quantity": "Worked example: studies",
+   "printed": "13",
+   "stats_key": "ex_k",
+   "value": 13
+  },
+  {
+   "quantity": "Worked example: Q",
+   "printed": "152.2",
+   "stats_key": "ex_Q",
+   "value": 152.23300808237326
+  },
+  {
+   "quantity": "Worked example: df",
+   "printed": "12",
+   "stats_key": "ex_df",
+   "value": 12
+  },
+  {
+   "quantity": "Worked example: I^2 (%)",
+   "printed": "92.1",
+   "stats_key": "ex_I2",
+   "value": 92.11734685456204
+  },
+  {
+   "quantity": "Worked example: I^2 lower limit (%)",
+   "printed": "81.9",
+   "stats_key": "ex_I2_lo",
+   "value": 81.92057455859656
+  },
+  {
+   "quantity": "Worked example: I^2 upper limit (%)",
+   "printed": "97.7",
+   "stats_key": "ex_I2_hi",
+   "value": 97.67807495788742
+  },
+  {
+   "quantity": "Worked example: smallest tau^2",
+   "printed": "0.228",
+   "stats_key": "ex_tau2_min",
+   "value": 0.22836286367690678
+  },
+  {
+   "quantity": "Worked example: its estimator (Hunter-Schmidt)",
+   "printed": "HS",
+   "stats_key": "ex_tau2_min_est",
+   "value": "HS"
+  },
+  {
+   "quantity": "Worked example: largest tau^2",
+   "printed": "0.346",
+   "stats_key": "ex_tau2_max",
+   "value": 0.34551570159859507
+  },
+  {
+   "quantity": "Worked example: its estimator (Sidik-Jonkman)",
+   "printed": "SJ",
+   "stats_key": "ex_tau2_max_est",
+   "value": "SJ"
+  },
+  {
+   "quantity": "Worked example: REML risk ratio",
+   "printed": "0.49",
+   "stats_key": "ex_rr_reml",
+   "value": 0.48942093982603035
+  },
+  {
+   "quantity": "Worked example: HKSJ lower limit",
+   "printed": "0.33",
+   "stats_key": "ex_rr_reml_hk_lo",
+   "value": 0.3300722484836008
+  },
+  {
+   "quantity": "Worked example: HKSJ upper limit",
+   "printed": "0.73",
+   "stats_key": "ex_rr_reml_hk_hi",
+   "value": 0.7256982598223362
+  },
+  {
+   "quantity": "Worked example: prediction interval lower",
+   "printed": "0.14",
+   "stats_key": "ex_rr_reml_pi_lo",
+   "value": 0.13596715109196847
+  },
+  {
+   "quantity": "Worked example: prediction interval upper",
+   "printed": "1.76",
+   "stats_key": "ex_rr_reml_pi_hi",
+   "value": 1.7616965157869218
+  },
+  {
+   "quantity": "Worked example: most influential trial",
+   "printed": "Hart & Sutherland, 1977",
+   "stats_key": "ex_baujat_top",
+   "value": "Hart & Sutherland, 1977"
+  }
+ ]
+}

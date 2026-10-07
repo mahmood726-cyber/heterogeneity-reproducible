@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; media-src 'self' blob:; manifest-src 'self'">
+  <link rel="stylesheet" href="../shared/forced-colors.css">
+  <meta name="description" content="Heterogeneity explorer: I², τ², prediction interval, Baujat plot, leave-one-out.">
+  <meta name="color-scheme" content="light dark">
+  <title>Heterogeneity Explorer</title>
+  <style>
+    :root {
+      --bg:#f6f4ef; --panel:#fff; --ink:#15181d; --muted:#5c6470;
+      --accent:#2c5e8a; --accent-soft:#e8f0f7; --warn:#b05a1c;
+      --warn-soft:#fbeedd; --border:#d9d5cc; --border-strong:#7a8294;
+      --input-bg:#fbfaf6;
+    }
+    @media (prefers-color-scheme:dark) {
+      :root {
+        --bg:#141618; --panel:#1c1f23; --ink:#e7e4dc; --muted:#98a0ae;
+        --accent:#6aa6d4; --accent-soft:#223044; --warn:#e0a268;
+        --warn-soft:#3a2d1c; --border:#2f343a; --border-strong:#495262;
+        --input-bg:#23272c;
+      }
+    }
+    @media (prefers-reduced-motion:reduce) { * { transition:none !important; animation:none !important; } }
+    * { box-sizing:border-box; }
+    html,body { margin:0; padding:0; }
+    body { font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+           background:var(--bg); color:var(--ink); min-height:100vh; line-height:1.5; }
+    header { padding:2rem clamp(1rem,3vw,3rem) 1rem; border-bottom:1px solid var(--border); background:var(--panel); }
+    header h1 { margin:0 0 0.25rem; font-size:1.5rem; letter-spacing:-0.01em; }
+    header p { margin:0; color:var(--muted); font-size:0.95rem; max-width:66ch; }
+    .layout { display:grid; grid-template-columns:minmax(320px,26rem) 1fr;
+              gap:1.5rem; padding:1.5rem clamp(1rem,3vw,3rem); align-items:start; }
+    @media (max-width:980px) { .layout { grid-template-columns:1fr; } }
+    .panel { background:var(--panel); border:1px solid var(--border); border-radius:10px; padding:1rem 1.25rem; }
+    .panel h2 { margin:0 0 0.75rem; font-size:0.9rem; font-weight:600;
+                text-transform:uppercase; letter-spacing:0.08em; color:var(--muted); }
+    fieldset { border:1px solid var(--border); border-radius:8px; padding:0.75rem 1rem 1rem; margin:0 0 1rem; }
+    legend { padding:0 0.5rem; font-size:0.85rem; font-weight:600; color:var(--accent); }
+    label { display:block; margin-bottom:0.5rem; font-size:0.88rem; }
+    label span.lbl { display:block; margin-bottom:0.15rem; }
+    label span.hint { display:block; color:var(--muted); font-size:0.75rem; margin-top:0.1rem; }
+    input[type="number"],input[type="text"],textarea,select {
+      width:100%; padding:0.4rem 0.55rem; border:1px solid var(--border);
+      border-radius:6px; background:var(--input-bg); color:var(--ink); font:inherit; font-size:0.9rem;
+    }
+    textarea { resize:vertical; min-height:10rem; font-family:ui-monospace,"Cascadia Code","SF Mono",Menlo,monospace; font-size:0.8rem; }
+    input:focus,textarea:focus,select:focus { outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent); }
+    .actions { display:flex; gap:0.5rem; flex-wrap:wrap; margin-top:0.75rem; padding-top:0.75rem; border-top:1px dashed var(--border); }
+    button { font:inherit; font-size:0.85rem; padding:0.45rem 0.85rem; border-radius:6px;
+             border:1px solid var(--border-strong); background:var(--panel); color:var(--ink); cursor:pointer; }
+    button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+    button:hover { filter:brightness(0.96); }
+    button:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+    .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:0.5rem; margin:0.5rem 0; }
+    .stat { background:var(--accent-soft); padding:0.5rem 0.75rem; border-radius:6px; }
+    .stat .k { display:block; font-size:0.72rem; letter-spacing:0.02em; color:var(--muted); }
+    .stat .v { display:block; font-size:0.95rem; font-weight:600; font-variant-numeric:tabular-nums; }
+    table { width:100%; border-collapse:collapse; font-size:0.82rem; margin-top:0.5rem; }
+    th,td { padding:0.35rem 0.5rem; text-align:right; border-bottom:1px solid var(--border); font-variant-numeric:tabular-nums; }
+    th { font-weight:600; color:var(--muted); font-size:0.72rem; letter-spacing:0.02em; }
+    th:first-child,td:first-child { text-align:left; }
+    .preview-wrap { position:sticky; top:1rem; }
+    .preview-wrap svg { width:100%; height:auto; background:#fff; display:block; border-radius:6px; margin-bottom:0.75rem; }
+    .warn-banner { margin-top:0.5rem; padding:0.5rem 0.75rem; background:var(--warn-soft);
+                   color:var(--warn); border:1px solid var(--warn); border-radius:6px; font-size:0.82rem; display:none; }
+    .warn-banner.is-visible { display:block; }
+    .footer-note { margin:0; color:var(--muted); font-size:0.78rem; text-align:right;
+                   padding:0 clamp(1rem,3vw,3rem) 1.5rem; }
+    .file-input-hidden { display:none; }
+  </style>
+  <link rel="stylesheet" href="../hub/app-style.css">
+  <!-- Cycle 2.2 shared UX modules — wired per RETROFIT_AUDIT.md:
+       wired:   csv-upload, axis-controls, results-export, url-state, reset-undo, tooltips
+       skipped (present-good): chart-download -->
+  <script src="../hub/shared/csv-upload.js"></script>
+  <script src="../hub/shared/axis-controls.js"></script>
+  <script src="../hub/shared/results-export.js"></script>
+  <script src="../hub/shared/url-state.js"></script>
+  <script src="../hub/shared/reset-undo.js"></script>
+  <script src="../hub/shared/tooltips.js"></script>
+  <script src="../shared/ma-core.js"></script>
+<script src="../shared/heterogeneity-ci.js"></script>
+<script src="../shared/build-info.js"></script>
+  <script src="../shared/ma-studies-v1.js"></script>
+  <script src="../shared/truthcert-export.js"></script>
+  <script src="../shared/truthcert-ui.js"></script>
+  <script src="../shared/ma-pooled-v1.js"></script>
+  <script src="../shared/app-flow.js"></script>
+  <script src="../shared/canonical-datasets.js"></script>
+  <script src="../shared/hero-examples.js"></script>
+  <script src="../shared/citation.js"></script>
+  <script src="../shared/autosave.js"></script>
+</head>
+<body>
+<a id="hub-back" href="../" aria-label="Back to allmeta hub" style="position:fixed;top:12px;left:12px;z-index:99999;padding:6px 12px;background:rgba(28,31,35,0.85);color:#fff;text-decoration:none;border-radius:14px;font:600 12px/1 system-ui,sans-serif;letter-spacing:.04em;box-shadow:0 2px 8px rgba(0,0,0,0.18);transition:opacity .15s ease;opacity:.85" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.85'">← allmeta</a>
+  <header>
+    <h1>Heterogeneity Explorer</h1>
+    <p>Paste study-level effect sizes. Reports Q, I² with its 95% CI, τ² by eight estimators (PM, REML, ML, EB, SJ, HE, HS, DL) with its 95% CI, the pooled estimate with z and HKSJ intervals, the 95% prediction interval, a Baujat plot and leave-one-out influence. DerSimonian-Laird needs at least 10 studies.</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel" aria-label="Input form">
+      <h2>Studies</h2>
+
+      <!-- csv-upload mount: file picker for study,yi,vi CSV files -->
+      <div id="alm-csv-mount"></div>
+
+      <fieldset>
+        <legend>Data</legend>
+        <label>
+          <span class="lbl">CSV: <code>label, estimate, SE</code></span>
+          <textarea id="f-data" spellcheck="false" aria-label="Studies"></textarea>
+        <div id="alm-hero-mount" aria-label="Load a famous benchmark dataset"></div>
+        <div id="alm-cite-mount" style="margin-top:0.4rem"></div>
+
+          <span class="hint">Lines starting with <code>#</code> or blanks are ignored.</span>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Options</legend>
+        <label>
+          <span class="lbl">τ² estimator for CI / PI</span>
+          <select id="f-tau2" aria-label="τ² estimator for CI / PI">
+            <option value="pm">Paule-Mandel (default, any k)</option>
+            <option value="reml">REML (any k)</option>
+            <option value="ml">Maximum likelihood (ML)</option>
+            <option value="eb">Empirical Bayes (≡ PM)</option>
+            <option value="sj">Sidik-Jonkman (SJ)</option>
+            <option value="he">Hedges (HE)</option>
+            <option value="hs">Hunter-Schmidt (HS)</option>
+            <option value="dl">DerSimonian-Laird (k ≥ 10 only)</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <!-- axis-controls mount: axis range + log-scale toggle -->
+      <div id="alm-axis-mount"></div>
+
+      <div id="stats-wrap"></div>
+      <div id="warn-banner" class="warn-banner" role="status" aria-live="polite"></div>
+
+      <div id="loo-wrap"></div>
+
+      <!-- results-export mount: CSV + JSON export of computed heterogeneity stats -->
+      <div id="alm-export-mount"></div>
+
+      <div class="actions">
+        <button type="button" id="btn-svg" class="primary">Download Baujat SVG</button>
+        <button type="button" id="btn-png">Download Baujat PNG</button>
+        <button type="button" id="btn-json">Download JSON</button>
+        <button type="button" id="btn-import">Import JSON</button>
+        <button type="button" id="btn-example">Load example</button>
+        <button type="button" id="btn-bus-load" title="Load studies from the shared MA bus">↓ Shared</button>
+        <button type="button" id="btn-bus-save" title="Push current studies to the shared MA bus">↑ Shared</button><button type="button" id="btn-verify-in-r" title="Push current studies to the shared bus and open WebR Validator pre-loaded with metafor — independent R verification in your browser." style="background:#2a6cae;color:#fff;border:1px solid #2a6cae;border-radius:6px;padding:0.45rem 0.85rem;font-weight:600;cursor:pointer;">Verify in R</button><button type="button" id="btn-truthcert" title="Download an HMAC-signed TruthCert receipt of the current studies — re-verifiable offline with your signing key." style="background:#7c3aed;color:#fff;border:1px solid #7c3aed;border-radius:6px;padding:0.45rem 0.85rem;font-weight:600;cursor:pointer;">TruthCert receipt</button><button type="button" id="btn-truthcert-key" title="Set or generate the TruthCert signing key (shared across all allmeta apps)." style="border:1px solid var(--border);border-radius:6px;padding:0.45rem 0.85rem;cursor:pointer;background:transparent;color:inherit;">&#128273; Key</button>
+        <button type="button" id="btn-validate-webr" title="Save to bus and open the WebR validator">Validate (R)</button>
+        <!-- reset-undo mount: replaces bare btn-reset confirm() with undo-stack dialog -->
+        <div id="alm-undo-mount" style="display:inline-flex;gap:0.5rem;align-items:center;"></div>
+        <!-- btn-reset hidden: reset-undo module provides the visible button; kept for test/bus compat -->
+        <button type="button" id="btn-reset" style="display:none">Reset</button>
+        <input type="file" id="file-import" class="file-input-hidden" accept="application/json,.json" aria-label="File import">
+      </div>
+
+      <div class="actions" style="margin-top:0.5rem; align-items:end; gap:0.6rem; flex-wrap:wrap;">
+        <label style="font-size:0.8rem;"><span class="lbl">Outcome name (for GRADE)</span><input type="text" id="f-grade-outcome" placeholder="e.g. All-cause mortality" aria-label="Outcome name (for GRADE)"></label>
+        <label style="font-size:0.8rem;"><span class="lbl">Effect scale (GRADE export)</span><select id="f-grade-scale" aria-label="Effect scale (GRADE export)"><option value="linear">linear (MD / SMD / log)</option><option value="ratio">ratio — exponentiate (OR / RR / HR)</option></select></label>
+        <button type="button" id="btn-push-grade" title="Push the HKSJ random-effects pooled estimate (point + 95% CI, exactly as shown) to the GRADE SoF builder via the ma-pooled-v1 bus. Pick 'ratio' to exponentiate log effects (OR/RR/HR) so GRADE gets the natural-scale value.">→ GRADE</button>
+      </div>
+    </section>
+
+    <section class="panel preview-wrap" aria-label="Diagnostics">
+      <h2>Baujat plot</h2>
+      <div id="svg-host"></div>
+      <h2>Leave-one-out</h2>
+      <div id="loo-table"></div>
+    
+      <div id="alm-flow-mount" aria-live="polite"></div>
+</section>
+  </main>
+
+  <p class="footer-note"><abbr data-gloss="tau2">τ²</abbr> estimators per <abbr data-gloss="DL">DerSimonian</abbr> &amp; Laird (1986), Paule &amp; Mandel (1982), <abbr data-gloss="REML">REML</abbr> (Viechtbauer 2005). <abbr data-gloss="HKSJ">HKSJ</abbr> correction applied to RE pooled CI. <abbr data-gloss="I2">I²</abbr> via Q-statistic with 95% Q-profile CI (Viechtbauer 2007; matches <code>metafor::confint</code>); 95% <abbr data-gloss="PI">PI</abbr> uses t<sub>k-1</sub> (Cochrane Handbook v6.5). Baujat after Baujat et&nbsp;al. (2002).</p>
+
+  <script>
+    // Cycle 7.1: exact qnorm(0.975) for 95% CIs (was 1.96; ~1.3e-5 drift vs metafor).
+    var Z975 = 1.959963984540054;
+
+  (function () {
+    "use strict";
+    const LS_KEY = "heterogeneity-v1";
+
+    const fields = { data:"f-data", tau2:"f-tau2" };
+    const EXAMPLE = "# Example: logOR across trials\nTrial A, -0.20, 0.10\nTrial B, -0.35, 0.12\nTrial C, 0.05, 0.18\nTrial D, -0.50, 0.15\nTrial E, 0.12, 0.11\nTrial F, -0.28, 0.09\nTrial G, -0.10, 0.14\nTrial H, -0.45, 0.20";
+
+    const warnEl = document.getElementById("warn-banner");
+    const svgHost = document.getElementById("svg-host");
+    const statsWrap = document.getElementById("stats-wrap");
+    const looTable = document.getElementById("loo-table");
+
+    function readState() { const o={}; for (const [k,id] of Object.entries(fields)) { const el=document.getElementById(id); if (el) o[k]=el.value||""; } return o; }
+    function writeState(s) { for (const [k,id] of Object.entries(fields)) { const el=document.getElementById(id); if (el && k in s) el.value=s[k]; } }
+
+    function parseStudies(text) {
+      const studies=[], warnings=[];
+      const lines = String(text||"").split(/\r?\n/);
+      for (let i=0;i<lines.length;i++) {
+        const raw = lines[i].trim();
+        if (!raw || raw.startsWith("#")) continue;
+        const parts = raw.split(/\s*[,\t]\s*/);
+        if (parts.length < 3) { warnings.push("Line "+(i+1)+": <3 columns"); continue; }
+        const est = parseFloat(parts[parts.length-2]);
+        const se = parseFloat(parts[parts.length-1]);
+        if (!isFinite(est) || !isFinite(se)) {
+          if (studies.length === 0 && i < 3) continue;
+          warnings.push("Line "+(i+1)+": non-numeric"); continue;
+        }
+        if (se <= 0) { warnings.push("Line "+(i+1)+": SE≤0"); continue; }
+        const label = parts.slice(0, parts.length-2).join(", ") || ("Study "+(studies.length+1));
+        studies.push({ label, est, se, v: se*se });
+      }
+      return { studies, warnings };
+    }
+
+    function weightedSums(studies, tau2) {
+      let sw=0, sw2=0, swy=0;
+      for (const s of studies) { const w = 1/(s.v+tau2); sw += w; sw2 += w*w; swy += w*s.est; }
+      const mu = sw > 0 ? swy/sw : 0;
+      let Q = 0;
+      for (const s of studies) { const w = 1/(s.v+tau2); Q += w*(s.est-mu)*(s.est-mu); }
+      return { sw, sw2, swy, mu, Q };
+    }
+
+    // τ² estimators delegate to the audited single-source core (shared/ma-core.js),
+    // verified vs metafor::rma. null preserved for k<2 (callers depend on it).
+    function tau2_DL(studies) {
+      return studies.length < 2 ? null : window.AlmMaCore.tau2DL(studies.map(s => s.est), studies.map(s => s.v));
+    }
+    function tau2_PM(studies) {
+      return studies.length < 2 ? null : window.AlmMaCore.tau2PM(studies.map(s => s.est), studies.map(s => s.v));
+    }
+    function tau2_REML(studies) {
+      return studies.length < 2 ? null : window.AlmMaCore.tau2REML(studies.map(s => s.est), studies.map(s => s.v));
+    }
+    // General dispatch for the selectable CI/PI estimator (all validated vs
+    // metafor::rma). DL keeps its k≥10 guard (advanced-stats.md); EB ≡ PM.
+    function tau2For(key, studies) {
+      if (studies.length < 2) return null;
+      const yi = studies.map(s => s.est), vi = studies.map(s => s.v), C = window.AlmMaCore;
+      switch (key) {
+        case "dl":   return studies.length >= 10 ? C.tau2DL(yi, vi) : null;
+        case "reml": return C.tau2REML(yi, vi);
+        case "ml":   return C.tau2ML(yi, vi);
+        case "he":   return C.tau2HE(yi, vi);
+        case "hs":   return C.tau2HS(yi, vi);
+        case "sj":   return C.tau2SJ(yi, vi);
+        case "eb":
+        case "pm":
+        default:     return C.tau2PM(yi, vi);
+      }
+    }
+
+    function poolSummary(studies, tau2) {
+      const k = studies.length;
+      const sums = weightedSums(studies, tau2);
+      const mu = sums.mu;
+      const se = Math.sqrt(1/sums.sw);
+      const Q0 = weightedSums(studies, 0).Q;
+      const df = k - 1;
+      const I2 = df > 0 ? Math.max(0, 100*(Q0 - df)/Q0) : 0;
+      const pQ = df > 0 ? 1 - chiSqCDF(Q0, df) : NaN;
+      // V6-04: HKSJ small-sample correction (Hartung-Knapp-Sidik-Jonkman) on
+      // the RE pooled estimate. q-statistic with floor at 1 to avoid CI
+      // narrowing when Q < df (per Cochrane Handbook §10.10.4 + advanced-stats.md).
+      let seHKSJ = se;
+      let tCrit = Z975; // z for k>=30
+      if (df > 0) {
+        const wRE = studies.map(s => 1 / (s.v + tau2));
+        const wSum = wRE.reduce((a,b)=>a+b,0);
+        const muRE = studies.reduce((a,s,i)=>a+wRE[i]*s.est,0)/wSum;
+        const qStar = studies.reduce((a,s,i)=>a+wRE[i]*Math.pow(s.est-muRE,2),0)/df;
+        const qFloored = Math.max(1, qStar);
+        seHKSJ = Math.sqrt(qFloored / wSum);
+        tCrit = tQuantile975(df);
+      }
+      return {
+        k, mu, se, ciLo: mu-Z975 *se, ciHi: mu+Z975 *se,
+        seHKSJ, ciLoHKSJ: mu - tCrit*seHKSJ, ciHiHKSJ: mu + tCrit*seHKSJ, tCrit,
+        Q:Q0, df, pQ, I2, tau2
+      };
+    }
+    // ---- Numerical support ----
+    function lnGamma(x) {
+      const cof=[76.18009172947146,-86.50532032941677,24.01409824083091,-1.231739572450155,1.208650973866179e-3,-5.395239384953e-6];
+      let y=x, tmp=x+5.5;
+      tmp -= (x+0.5)*Math.log(tmp);
+      let ser=1.000000000190015;
+      for (let j=0;j<6;j++) { y+=1; ser += cof[j]/y; }
+      return -tmp + Math.log(2.5066282746310005*ser/x);
+    }
+    function betaCF(x,a,b) {
+      const MAXIT=200, EPS=3e-10, FPMIN=1e-30;
+      const qab=a+b, qap=a+1, qam=a-1;
+      let c=1, d=1-qab*x/qap;
+      if (Math.abs(d)<FPMIN) d=FPMIN;
+      d=1/d; let h=d;
+      for (let m=1;m<=MAXIT;m++) {
+        const m2=2*m;
+        let aa=m*(b-m)*x/((qam+m2)*(a+m2));
+        d=1+aa*d; if (Math.abs(d)<FPMIN) d=FPMIN;
+        c=1+aa/c; if (Math.abs(c)<FPMIN) c=FPMIN;
+        d=1/d; h*=d*c;
+        aa=-(a+m)*(qab+m)*x/((a+m2)*(qap+m2));
+        d=1+aa*d; if (Math.abs(d)<FPMIN) d=FPMIN;
+        c=1+aa/c; if (Math.abs(c)<FPMIN) c=FPMIN;
+        d=1/d;
+        const del=d*c; h*=del;
+        if (Math.abs(del-1)<EPS) break;
+      }
+      return h;
+    }
+    function betaInc(a,b,x) {
+      if (x<=0) return 0;
+      if (x>=1) return 1;
+      const bt = Math.exp(lnGamma(a+b)-lnGamma(a)-lnGamma(b)+a*Math.log(x)+b*Math.log(1-x));
+      if (x < (a+1)/(a+b+2)) return bt*betaCF(x,a,b)/a;
+      return 1 - bt*betaCF(1-x,b,a)/b;
+    }
+    function tTwoSidedP(t,df) {
+      if (!isFinite(t) || df<=0) return NaN;
+      const x = df/(df+t*t);
+      return betaInc(df/2, 0.5, x);
+    }
+    function tQuantile975(df) {
+      // 97.5% Student-t quantile from the shared single-source core (exact t-CDF inverted to machine precision).
+      // The previous local bisection stopped at a 1e-6 bracket, so HKSJ and prediction intervals differed from
+      // R's qt() in the 7th significant digit.
+      if (!(df > 0)) return NaN;
+      return window.AlmMaCore._qt(0.975, df);
+    }
+    function lowerIncGamma(s,x) {
+      // P(s,x) = gamma(s,x)/Γ(s) — series for x<s+1, cont. frac. otherwise
+      if (x < 0 || s <= 0) return NaN;
+      if (x === 0) return 0;
+      if (x < s+1) {
+        let sum=1/s, term=sum;
+        for (let n=1;n<200;n++) { term *= x/(s+n); sum += term; if (Math.abs(term) < Math.abs(sum)*1e-12) break; }
+        return sum * Math.exp(-x + s*Math.log(x) - lnGamma(s));
+      } else {
+        // continued fraction
+        const MAXIT=200, FPMIN=1e-30, EPS=1e-12;
+        let b = x+1-s, c=1/FPMIN, d=1/b, h=d;
+        for (let i=1;i<=MAXIT;i++) {
+          const an = -i*(i-s);
+          b += 2;
+          d = an*d + b; if (Math.abs(d)<FPMIN) d=FPMIN;
+          c = b + an/c; if (Math.abs(c)<FPMIN) c=FPMIN;
+          d = 1/d; const del = d*c; h *= del;
+          if (Math.abs(del-1) < EPS) break;
+        }
+        return 1 - Math.exp(-x + s*Math.log(x) - lnGamma(s)) * h;
+      }
+    }
+    function chiSqCDF(x,df) {
+      if (x<=0) return 0;
+      return lowerIncGamma(df/2, x/2);
+    }
+    // Q-profile confidence interval for τ² and I² (Viechtbauer 2007; the method
+    // metafor::confint.rma.uni uses, and what advanced-stats.md prescribes for small k)
+    // is provided by the shared single-source module shared/heterogeneity-ci.js
+    // (window.AlmHetCI). Verified vs metafor::confint; see workbench-qprofile-ci.spec.mjs.
+    function qProfileCI(studies) {
+      return (window.AlmHetCI ? window.AlmHetCI.qProfileCI(studies) : null);
+    }
+    window.__almQProfileCI = qProfileCI; // exposed for R-parity tests
+
+    function escapeXml(s) {
+      return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&apos;");
+    }
+    function fmt(x,d) { if (!isFinite(x)) return "--"; return x.toFixed(d==null?3:d); }
+    function niceTicks(lo,hi,n) {
+      if (!(hi>lo)) return [lo];
+      const r=hi-lo, s0=r/Math.max(1,n);
+      const m=Math.pow(10,Math.floor(Math.log10(s0)));
+      const nm=s0/m;
+      let step = nm<1.5?m:(nm<3?2*m:(nm<7?5*m:10*m));
+      const start=Math.ceil(lo/step)*step;
+      const t=[]; for (let v=start;v<=hi+1e-9;v+=step) t.push(v);
+      return t;
+    }
+
+    // ---- Baujat plot ----
+    function buildBaujat(studies, tau2, mu, sw) {
+      // X_i = w_i * (y_i - mu)^2, contribution to Q
+      // Y_i = (mu_all - mu_{-i})^2 / Var(mu_all) — influence on pooled
+      const k = studies.length;
+      const points = [];
+      for (let i=0;i<k;i++) {
+        const s = studies[i];
+        const w = 1/(s.v+tau2);
+        const xi = w * (s.est - mu) * (s.est - mu);
+        // Leave-one-out pool with same tau2
+        let swi=0, swyi=0;
+        for (let j=0;j<k;j++) {
+          if (j===i) continue;
+          const wj = 1/(studies[j].v+tau2);
+          swi += wj; swyi += wj*studies[j].est;
+        }
+        const muI = swi > 0 ? swyi/swi : 0;
+        const yi = Math.pow(mu - muI, 2) / (1/sw);
+        points.push({ label: s.label, x: xi, y: yi });
+      }
+      return points;
+    }
+
+    function buildSvg(studies, summary, info) {
+      const W=680, H=460, L=78, R=24, T=summary?54:20, B=78;
+      const plotW=W-L-R, plotH=H-T-B;
+      const points = (info && info.baujat) || buildBaujat(studies, summary.tau2, summary.mu, 1/(summary.se*summary.se));
+      let xMax = 0, yMax = 0;
+      for (const p of points) { if (p.x>xMax) xMax=p.x; if (p.y>yMax) yMax=p.y; }
+      if (xMax <= 0) xMax = 1;
+      if (yMax <= 0) yMax = 1;
+      xMax *= 1.1; yMax *= 1.15;
+      function x(v) { return L + v/xMax * plotW; }
+      function y(v) { return T + plotH - v/yMax * plotH; }
+
+      const parts = [];
+      parts.push("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+      parts.push("<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 "+W+" "+H+"\" width=\""+W+"\" height=\""+H+"\" font-family=\"system-ui, sans-serif\">");
+      parts.push("<rect x=\"0\" y=\"0\" width=\""+W+"\" height=\""+H+"\" fill=\"#fff\"/>");
+      parts.push("<text x=\""+(W/2)+"\" y=\"26\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"700\" fill=\"#15181d\">Baujat plot — heterogeneity vs influence</text>");
+      // Frame
+      parts.push("<rect x=\""+L+"\" y=\""+T+"\" width=\""+plotW+"\" height=\""+plotH+"\" fill=\"#fbfaf6\" stroke=\"#d9d5cc\"/>");
+      // Axes
+      const axisY = T+plotH;
+      const xTicks = niceTicks(0, xMax, 5);
+      for (const t of xTicks) {
+        parts.push("<line x1=\""+x(t)+"\" y1=\""+axisY+"\" x2=\""+x(t)+"\" y2=\""+(axisY+4)+"\" stroke=\"#15181d\"/>");
+        parts.push("<text x=\""+x(t)+"\" y=\""+(axisY+18)+"\" text-anchor=\"middle\" font-size=\"13\" fill=\"#5c6470\">"+fmt(t,2)+"</text>");
+      }
+      const yTicks = niceTicks(0, yMax, 5);
+      for (const t of yTicks) {
+        parts.push("<line x1=\""+L+"\" y1=\""+y(t)+"\" x2=\""+(L-4)+"\" y2=\""+y(t)+"\" stroke=\"#15181d\"/>");
+        parts.push("<text x=\""+(L-8)+"\" y=\""+(y(t)+4)+"\" text-anchor=\"end\" font-size=\"13\" fill=\"#5c6470\">"+fmt(t,2)+"</text>");
+      }
+      // Axis labels
+      parts.push("<text x=\""+(L+plotW/2)+"\" y=\""+(axisY+42)+"\" text-anchor=\"middle\" font-size=\"13\" fill=\"#15181d\">Squared Pearson residual (contribution to Q at the fitted τ²)</text>");
+      parts.push("<text transform=\"translate("+(L-52)+","+(T+plotH/2)+") rotate(-90)\" text-anchor=\"middle\" font-size=\"13\" fill=\"#15181d\">Influence on the overall result</text>");
+      // Points: every point carries its label as a tooltip; printed labels go right of the point (left of it near the
+      // right edge) and are skipped where they would overprint one already placed, most influential first.
+      const placed = [];
+      const order = points.map((p, i) => i).sort((a, b) => points[b].y - points[a].y || points[b].x - points[a].x);
+      const labelled = new Set();
+      for (const i of order) {
+        const p = points[i], px = x(p.x), py = y(p.y), w = 7.2 * String(p.label).length;
+        const left = px + 8 + w > L + plotW;
+        const box = { x0: left ? px - 8 - w : px + 8, x1: left ? px - 8 : px + 8 + w, y0: py - 9, y1: py + 5 };
+        const hitsPoint = points.some((q, j) => j !== i && x(q.x) + 6 > box.x0 && x(q.x) - 6 < box.x1 && y(q.y) + 6 > box.y0 && y(q.y) - 6 < box.y1);
+        if (box.x0 < L || hitsPoint || placed.some((b) => box.x0 < b.x1 && b.x0 < box.x1 && box.y0 < b.y1 && b.y0 < box.y1)) continue;
+        placed.push(box); labelled.add(i); p._left = left;
+      }
+      points.forEach((p, i) => {
+        parts.push("<circle cx=\""+x(p.x)+"\" cy=\""+y(p.y)+"\" r=\"5\" fill=\"#2c5e8a\" stroke=\"#15181d\" stroke-width=\"0.8\"><title>"+escapeXml(p.label)+"</title></circle>");
+        if (labelled.has(i))
+          parts.push("<text x=\""+(x(p.x)+(p._left ? -8 : 8))+"\" y=\""+(y(p.y)+4)+"\" font-size=\"13\" fill=\"#15181d\""+(p._left ? " text-anchor=\"end\"" : "")+">"+escapeXml(p.label)+"</text>");
+      });
+      parts.push("</svg>");
+      return parts.join("");
+    }
+
+    function statCard(k,v) { return "<div class=\"stat\"><span class=\"k\">"+escapeXml(k)+"</span><span class=\"v\">"+escapeXml(v)+"</span></div>"; }
+
+    // Every number the page reports, computed once at full precision. The page renders from this object, the results
+    // export reads it, and the validation suite calls the same function (window.__almHetCompute).
+    function computeAll(studies, chosen) {
+      const k = studies.length;
+      if (k < 2) return { k, requested: chosen, notPooled: true };
+      const tauEstimates = {
+        dl: k >= 10 ? tau2_DL(studies) : null,
+        reml: tau2_REML(studies),
+        pm: tau2_PM(studies)
+      };
+      const dlRefused = chosen === "dl" && tauEstimates.dl == null;
+      const chosenKey = dlRefused ? "pm" : (chosen || "pm");
+      const tau2 = tau2For(chosenKey, studies);
+      const sum = poolSummary(studies, tau2);
+      // Prediction interval (k ≥ 2). Uses t_{k-1} per Cochrane Handbook v6.5; the older IntHout-2016 t_{k-2} is
+      // superseded and gives a PI that is too wide — ~3x at k=3 (t_1=12.7 vs t_2=4.3).
+      const piT = tQuantile975(k-1);
+      const piSE = Math.sqrt(tau2 + sum.se*sum.se);
+      const pi = { lo: sum.mu - piT*piSE, hi: sum.mu + piT*piSE, t: piT, df: k-1 };
+      // Q-profile 95% CI for I² and τ² (Viechtbauer 2007). Distribution-free of the chosen point estimator — it
+      // profiles the generalised Q-statistic directly.
+      const qpci = qProfileCI(studies);
+      // Leave-one-out with τ² re-estimated by the chosen estimator (DL falls back to PM below k=10, as above).
+      const loo = [];
+      for (let i=0;i<k;i++) {
+        const subset = studies.slice(0,i).concat(studies.slice(i+1));
+        const looKey = chosenKey === "dl" && subset.length < 10 ? "pm" : chosenKey;
+        const t2 = subset.length >= 2 ? tau2For(looKey, subset) : 0;
+        const s2 = poolSummary(subset, t2);
+        loo.push({ label: studies[i].label, k: subset.length, mu: s2.mu, se: s2.se, ciLo: s2.ciLo, ciHi: s2.ciHi,
+                   I2: s2.I2, tau2: t2, estimator: looKey });
+      }
+      // Baujat (Baujat et al. 2002; metafor::baujat): x = squared Pearson residual (y_i - mu)^2 / (v_i + tau2);
+      // y = (mu - mu_(-i))^2 / Var(mu_(-i)), from the leave-one-out refit above (tau2 re-estimated). The plot used to
+      // hold tau2 fixed and divide by the FULL-model variance, which is neither definition.
+      const baujat = studies.map((s, i) => ({
+        label: s.label,
+        x: (s.est - sum.mu) * (s.est - sum.mu) / (s.v + tau2),
+        y: Math.pow(sum.mu - loo[i].mu, 2) / (loo[i].se * loo[i].se)
+      }));
+      return { k, requested: chosen, estimator: chosenKey, dlRefused, tau2, sum, tauEstimates, pi, qpci, loo, baujat };
+    }
+    window.__almHetCompute = function (text, chosen) { return computeAll(parseStudies(text).studies, chosen); };
+
+    function renderStats(studies, chosen) {
+      const k = studies.length;
+      if (!k) { statsWrap.innerHTML = ""; looTable.innerHTML = ""; return null; }
+      if (k < 2) {
+        statsWrap.innerHTML = "<div class=\"stats\">" + statCard("k", String(k)) + "</div>";
+        looTable.innerHTML = "";
+        return null;
+      }
+      const res = computeAll(studies, chosen);
+      const { tauEstimates, tau2, sum, qpci } = res;
+      const piLo = res.pi.lo, piHi = res.pi.hi;
+
+      const parts = [];
+      parts.push(statCard("k", String(k)));
+      // a p-value is never 0: below 0.0005 it is shown as p<0.001
+      parts.push(statCard("Q (df=" + sum.df + ")", fmt(sum.Q, 2) + "  " + (sum.pQ < 0.0005 ? "p<0.001" : "p=" + fmt(sum.pQ, 3))));
+      parts.push(statCard("I²", fmt(sum.I2, 1) + "%" +
+        (qpci ? " [" + fmt(qpci.I2Lo, 1) + ", " + fmt(qpci.I2Hi, 1) + "]" : "")));
+      if (qpci) parts.push(statCard("τ² 95% CI (Q-profile)",
+        "[" + fmt(qpci.tau2Lo, 4) + ", " + fmt(qpci.tau2Hi, 4) + "]"));
+      parts.push(statCard("τ² (PM)", fmt(tauEstimates.pm, 4)));
+      parts.push(statCard("τ² (REML)", fmt(tauEstimates.reml, 4)));
+      parts.push(statCard("τ² (DL)", tauEstimates.dl == null ? "k<10 (skipped)" : fmt(tauEstimates.dl, 4)));
+      // the tau^2 the pooled estimate and intervals below actually use, and its estimator (DL below k=10 falls back to PM)
+      parts.push(statCard("τ² used", fmt(tau2, 4) + " (" + ({pm:"PM",reml:"REML",ml:"ML",eb:"EB",sj:"SJ",he:"HE",hs:"HS",dl:"DL"})[res.estimator] + ")"));
+      parts.push(statCard("RE pooled (z)", fmt(sum.mu, 3) + " [" + fmt(sum.ciLo, 3) + ", " + fmt(sum.ciHi, 3) + "]"));
+      parts.push(statCard("RE pooled (HKSJ + t)", fmt(sum.mu, 3) + " [" + fmt(sum.ciLoHKSJ, 3) + ", " + fmt(sum.ciHiHKSJ, 3) + "]"));
+      parts.push(statCard("95% PI", "[" + fmt(piLo, 3) + ", " + fmt(piHi, 3) + "]"));
+
+      statsWrap.innerHTML = "<div class=\"stats\">" + parts.join("") + "</div>";
+
+      // Leave-one-out
+      const rows = [];
+      rows.push("<tr><th>Omitted</th><th>k</th><th>μ</th><th title=\"Normal (z) interval — the main panel's pooled CI uses HKSJ+t\">95% CI (z)</th><th>I²</th><th>τ²</th></tr>");
+      for (const r of res.loo) {
+        rows.push("<tr><td>" + escapeXml(r.label) + "</td><td>" + r.k + "</td><td>" + fmt(r.mu,3) + "</td><td>[" + fmt(r.ciLo,3) + ", " + fmt(r.ciHi,3) + "]</td><td>" + fmt(r.I2,1) + "%</td><td>" + fmt(r.tau2,4) + "</td></tr>");
+      }
+      looTable.innerHTML = "<table>" + rows.join("") + "</table>";
+
+      return res;
+    }
+
+    function renderWarnings(list, extras) {
+      const all = list.concat(extras || []);
+      if (!all.length) { warnEl.classList.remove("is-visible"); warnEl.innerHTML=""; return; }
+      warnEl.innerHTML = "<strong>Notes</strong><ul>"+all.map(w=>"<li>"+escapeXml(w)+"</li>").join("")+"</ul>";
+      warnEl.classList.add("is-visible");
+    }
+
+    // Last-computed result cache — populated by render(), read by __almResults().
+    // Exposed on window so the alm-init script block (separate IIFE) can access them.
+    let _lastInfo = null, _lastStudies = [];
+    window._almLastFE = function () { return _lastInfo; };   // alm-init reads this to know render() ran
+    window._almLastStudies = function () { return _lastStudies; };
+
+    function render() {
+      const state = readState();
+      const parsed = parseStudies(state.data);
+      const extras = [];
+      if (state.tau2 === "dl" && parsed.studies.length < 10) {
+        extras.push("DerSimonian-Laird is not offered for fewer than 10 studies (it is biased for small k); Paule-Mandel is used instead.");
+      }
+      const info = renderStats(parsed.studies, state.tau2);
+      _lastInfo = info; _lastStudies = parsed.studies;
+      renderWarnings(parsed.warnings, extras);
+      const svg = (parsed.studies.length >= 2 && info)
+        ? buildSvg(parsed.studies, info.sum, info)
+        : "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 120\" width=\"400\" height=\"120\"><rect width=\"400\" height=\"120\" fill=\"#fff\"/><text x=\"200\" y=\"60\" text-anchor=\"middle\" font-family=\"system-ui\" font-size=\"13\" fill=\"#5c6470\">Need ≥2 study rows.</text></svg>";
+      svgHost.innerHTML = svg;
+      try { localStorage.setItem(LS_KEY, JSON.stringify(state)); } catch(e) {}
+      // url-state write (after each render so the link is always shareable)
+      try {
+        if (window.alm && window.alm.urlState && window.__almSnapshot) {
+          window.alm.urlState.write(window.__almSnapshot());
+        }
+      } catch(e) {}
+    }
+
+    function loadSaved() {
+      try {
+        const raw = localStorage.getItem(LS_KEY);
+        if (!raw) return false;
+        const parsed = JSON.parse(raw);
+        if (parsed && typeof parsed === "object") { writeState(parsed); return true; }
+      } catch(e) {}
+      return false;
+    }
+    function downloadBlob(blob, filename) {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url; a.download = filename;
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+    }
+    function slugify(t, f) { const s=String(t||"").trim().toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,""); return s||f; }
+
+    // TruthCert on export — bind to the CURRENT studies + heterogeneity summary.
+    async function hetReceipt(studies, info) {
+      if (!window.AlmTruthCertExport) return null;
+      try {
+        return await AlmTruthCertExport.buildReceipt({ studies: studies,
+          method: "Heterogeneity: Q, I², τ², prediction interval (+ Baujat)",
+          label: "heterogeneity", results: (info && info.sum) || null });
+      } catch (e) { return null; }
+    }
+    async function onDownloadSvg() {
+      const state = readState();
+      const parsed = parseStudies(state.data);
+      if (parsed.studies.length < 2) return Toast.show("Need ≥2 studies.", "warn");
+      const info = renderStats(parsed.studies, state.tau2);
+      let svg = buildSvg(parsed.studies, info.sum, info);
+      const res = await hetReceipt(parsed.studies, info);
+      if (res && window.AlmTruthCertExport) svg = AlmTruthCertExport.stampSVG(svg, res);
+      downloadBlob(new Blob([svg],{type:"image/svg+xml;charset=utf-8"}), "baujat-"+slugify("","plot")+".svg");
+    }
+    async function onDownloadPng() {
+      const state = readState();
+      const parsed = parseStudies(state.data);
+      if (parsed.studies.length < 2) return Toast.show("Need ≥2 studies.", "warn");
+      const info = renderStats(parsed.studies, state.tau2);
+      let svg = buildSvg(parsed.studies, info.sum, info);
+      const res = await hetReceipt(parsed.studies, info);
+      if (res && window.AlmTruthCertExport) svg = AlmTruthCertExport.stampSVG(svg, res);
+      const W=680, H=460, scale=2;
+      const img = new Image();
+      const blob = new Blob([svg],{type:"image/svg+xml;charset=utf-8"});
+      const url = URL.createObjectURL(blob);
+      img.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = W*scale; canvas.height = H*scale;
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#fff"; ctx.fillRect(0,0,canvas.width,canvas.height);
+        ctx.drawImage(img,0,0,canvas.width,canvas.height);
+        URL.revokeObjectURL(url);
+        canvas.toBlob(function(b){ if (b) downloadBlob(b, "baujat-plot.png"); }, "image/png");
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); Toast.show("PNG render failed.", "error"); };
+      img.src = url;
+    }
+    async function onDownloadJson() {
+      const state = readState();
+      const out = Object.assign({_schema:"heterogeneity-v1", _savedAt:new Date().toISOString()}, state);
+      const parsed = parseStudies(state.data);
+      if (parsed.studies.length >= 2) {
+        const res = await hetReceipt(parsed.studies, renderStats(parsed.studies, state.tau2));
+        if (res) out.truthcert = res.signed ? res.receipt : res.manifest;
+      }
+      downloadBlob(new Blob([JSON.stringify(out,null,2)],{type:"application/json"}), "heterogeneity-state.json");
+    }
+    function onImportJson(file) {
+      const r = new FileReader();
+      r.onload = function () {
+        try { const p = JSON.parse(r.result); if (p && typeof p === "object") { writeState(p); render(); } }
+        catch(e) { Toast.show("Could not parse JSON: "+e.message, "warn"); }
+      };
+      r.readAsText(file);
+    }
+    function onReset() {
+      if (!confirm("Clear all inputs?")) return;
+      document.getElementById("f-data").value = "";
+      document.getElementById("f-tau2").value = "pm";
+      render();
+    }
+    function onExample() {
+      document.getElementById("f-data").value = EXAMPLE;
+      render();
+    }
+    // ---- Shared MA bus (ma-studies-v1) — delegated to shared/ma-studies-v1.js ----
+    function onBusLoad() {
+      try {
+        const studies = (window.MaStudies && MaStudies.read()) || [];
+        if (!studies.length) { Toast.show("No shared studies yet.", "warn"); return; }
+        const lines = studies.map(s => [s.label, s.est, s.se].join(", "));
+        document.getElementById("f-data").value = lines.join("\n");
+        render();
+      } catch (e) { Toast.show("Could not load shared: " + e.message, "warn"); }
+    }
+    function onBusSave() {
+      const parsed = parseStudies(document.getElementById("f-data").value);
+      if (!parsed.studies.length) { Toast.show("Nothing to save.", "warn"); return; }
+      if (!window.MaStudies) { Toast.show("Bus helper not loaded.", "error"); return; }
+      const ok = MaStudies.write(parsed.studies);
+      if (ok) Toast.show("Saved " + parsed.studies.length + " studies to shared bus.", "warn");
+      else Toast.show("Could not save to shared bus.", "warn");
+    }
+    // Push the HKSJ random-effects pooled estimate to GRADE SoF via ma-pooled-v1.
+    // Carries the displayed point + HKSJ CI verbatim; the export-scale selector
+    // back-transforms log effects (ratio) so the consumer never has to re-pool.
+    function onPushPooledToGrade() {
+      const info = window._almLastFE && window._almLastFE();
+      const sum = info && info.sum;
+      if (!sum || !isFinite(sum.mu)) { Toast.show("Pool at least 2 studies first.", "warn"); return; }
+      if (!window.MaPooled) { Toast.show("Pooled-bus helper not loaded.", "error"); return; }
+      const scaleEl = document.getElementById("f-grade-scale");
+      const ratio = scaleEl && scaleEl.value === "ratio";
+      const tx = v => ratio ? Math.exp(v) : v;
+      const result = {
+        pointEstimate: tx(sum.mu),
+        ciLo: tx(sum.ciLoHKSJ),
+        ciHi: tx(sum.ciHiHKSJ),
+        scale: ratio ? "ratio" : "linear",
+        k: sum.k,
+        model: "random",
+      };
+      const nameEl = document.getElementById("f-grade-outcome");
+      const label = nameEl && nameEl.value ? nameEl.value.trim() : "";
+      if (label) result.label = label;
+      const n = MaPooled.add(result);
+      if (n) Toast.show(n + " outcome" + (n === 1 ? "" : "s") + " queued for GRADE. Open GRADE SoF → “Load pooled”.", "warn");
+      else Toast.show("Could not push pooled result.", "warn");
+    }
+
+    function attach() {
+      for (const id of Object.values(fields)) { const el = document.getElementById(id); if (el) el.addEventListener("input", render); }
+      document.getElementById("btn-svg").addEventListener("click", onDownloadSvg);
+      document.getElementById("btn-png").addEventListener("click", onDownloadPng);
+      document.getElementById("btn-json").addEventListener("click", onDownloadJson);
+      document.getElementById("btn-reset").addEventListener("click", onReset);
+      document.getElementById("btn-example").addEventListener("click", onExample);
+      document.getElementById("btn-bus-load").addEventListener("click", onBusLoad);
+      document.getElementById("btn-bus-save").addEventListener("click", onBusSave);
+      if (window.TruthCertUI) {
+        TruthCertUI.attachSettingsButton({ btn: "#btn-truthcert-key" });
+        TruthCertUI.attachReceiptButton({ btn: "#btn-truthcert", basename: "heterogeneity",
+          getStudies: function () { return parseStudies(document.getElementById("f-data").value).studies; } });
+      }
+      document.getElementById("btn-push-grade").addEventListener("click", onPushPooledToGrade);
+      document.getElementById("btn-validate-webr").addEventListener("click", function () {
+        onBusSave();
+        window.open("../webr-validator/index.html?fromBus=1", "_blank");
+      });
+      document.getElementById("btn-import").addEventListener("click", function(){ document.getElementById("file-import").click(); });
+      document.getElementById("file-import").addEventListener("change", function(e){
+        const f = e.target.files && e.target.files[0];
+        if (f) onImportJson(f); e.target.value = "";
+      });
+    }
+
+    const loaded = loadSaved();
+    if (!loaded) { document.getElementById("f-data").value = EXAMPLE; }
+    attach();
+    render();
+  })();
+  </script>
+  <script>
+  // =======================================================================
+  // Cycle 2.2 shared UX modules. Wire-in per RETROFIT_AUDIT.md:
+  //   wired:   csv-upload, axis-controls, results-export, url-state, reset-undo, tooltips
+  //   skipped (present-good): chart-download
+  // Adapter shims map to the existing engine without changing math.
+  // Deferred: axis-controls renders but does not yet drive the Baujat plot X/Y
+  //   axis domain — buildSvg() would require a refactor to accept external
+  //   [lo, hi] overrides; deferred to a future cycle (same precedent as forest-plot).
+  // =======================================================================
+  (function () {
+    if (!window.alm) return;  // fail-open: modules not loaded, skip silently
+
+    // ---- adapter shims --------------------------------------------------
+
+    // Load rows from csv-upload (format: [{study, yi, vi}, ...]) into the
+    // textarea using the app's native "label, estimate, SE" line format, then
+    // dispatch 'input' so render() fires.
+    window.__almLoad = function (rows) {
+      var lines = rows.filter(function (r) {
+        return r.study != null && isFinite(r.yi) && isFinite(r.vi) && r.vi > 0;
+      }).map(function (r) {
+        return r.study + ', ' + r.yi + ', ' + Math.sqrt(r.vi);
+      });
+      var ta = document.getElementById('f-data');
+      if (!ta) return;
+      ta.value = lines.join('\n');
+      ta.dispatchEvent(new Event('input', { bubbles: true }));
+    };
+
+    // Return the last pooled result as a flat object for results-export.
+    // Reads via window accessors exposed from the main IIFE.
+    window.__almResults = function () {
+      var info = window._almLastFE ? window._almLastFE() : null;
+      var studies = window._almLastStudies ? window._almLastStudies() : [];
+      var out = { _schema: 'heterogeneity-results-v1', k: studies.length };
+      if (info && info.sum) {
+        var s = info.sum;
+        out.mu = s.mu;
+        out.se = s.se;
+        out.ci_lb = s.ciLo;
+        out.ci_ub = s.ciHi;
+        out.ci_lb_hksj = s.ciLoHKSJ;
+        out.ci_ub_hksj = s.ciHiHKSJ;
+        out.Q = s.Q;
+        out.Q_df = s.df;
+        out.Q_p = s.pQ;
+        out.I2 = s.I2;
+        out.tau2 = s.tau2;
+        out.tau2_estimator = info.estimator;
+        out.tau2_pm = info.tauEstimates.pm;
+        out.tau2_reml = info.tauEstimates.reml;
+        out.tau2_dl = info.tauEstimates.dl;
+        out.pi_lb = info.pi.lo;
+        out.pi_ub = info.pi.hi;
+      }
+      if (studies.length >= 2 && window.__almQProfileCI) {
+        var qp = window.__almQProfileCI(studies);
+        if (qp) {
+          out.tau2_ci_lb = qp.tau2Lo;
+          out.tau2_ci_ub = qp.tau2Hi;
+          out.I2_ci_lb = qp.I2Lo;
+          out.I2_ci_ub = qp.I2Hi;
+        }
+      }
+      return out;
+    };
+
+    // Snapshot: capture every form control value into a flat object.
+    window.__almSnapshot = function () {
+      var ta = document.getElementById('f-data');
+      var t2 = document.getElementById('f-tau2');
+      return {
+        data: ta ? ta.value : '',
+        tau2: t2 ? t2.value : 'pm'
+      };
+    };
+
+    // Restore: apply snapshot back to form controls and re-render.
+    // snap === {} means "clear all".
+    window.__almRestore = function (snap) {
+      var isEmpty = !snap || Object.keys(snap).length === 0;
+      var ta = document.getElementById('f-data');
+      var t2 = document.getElementById('f-tau2');
+      if (ta) ta.value = isEmpty ? '' : (snap.data != null ? snap.data : '');
+      if (t2) t2.value = isEmpty ? 'pm' : (snap.tau2 != null ? snap.tau2 : 'pm');
+      if (ta) ta.dispatchEvent(new Event('input', { bubbles: true }));
+    };
+
+    // ---- module init -----------------------------------------------------
+
+    window.alm.csvUpload({
+      target: '#alm-csv-mount',
+      columns: [
+        { name: 'study', required: true,  type: 'string', example: 'Smith 2024' },
+        { name: 'yi',    required: true,  type: 'float',  example: '0.21' },
+        { name: 'vi',    required: true,  type: 'float',  example: '0.04' },
+      ],
+      onParse: function (result) {
+        window.alm.resetUndo.snapshot();  // snapshot BEFORE loading new data
+        window.__almLoad(result.rows);
+      },
+    });
+
+    window.alm.axisControls({
+      target: '#alm-axis-mount',
+      axes: [{ key: 'x', label: 'Baujat X axis', range: [null, null], log: false }],
+      onChange: function (state) {
+        window.__almAxis = state;
+        // NOTE: axis-controls renders min/max inputs but does NOT yet drive
+        // the Baujat plot axis domain. buildSvg() auto-computes its domain
+        // from point extents; wiring __almAxis requires threading lo/hi
+        // overrides through render() — deferred to a future cycle.
+        // The controls are functional UI but domain override is no-op.
+      },
+    });
+
+    window.alm.resultsExport({
+      target: '#alm-export-mount',
+      basename: 'heterogeneity-results',
+      getResults: function () { return window.__almResults(); },
+    });
+
+    window.alm.urlState({ version: 1 });
+    var restored = window.alm.urlState.read();
+    if (restored && Object.keys(restored).length > 0) {
+      window.__almRestore(restored);
+    }
+
+    window.alm.resetUndo({
+      target: '#alm-undo-mount',
+      snapshot: function () { return window.__almSnapshot(); },
+      restore:  function (snap) { return window.__almRestore(snap); },
+      capacity: 20,
+    });
+
+    window.alm.tooltips({ src: '../hub/shared/glossary.json' });
+  })();
+  </script>
+  <script src="../shared/toast.js" defer></script>
+<script src="../hub/shared/a11y-landmarks.js"></script>
+
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  }
+  ready(function () {
+    if (!window.MaStudies || typeof MaStudies.attachVerifyInRButton !== "function") return;
+    MaStudies.attachVerifyInRButton({ btn: "#btn-verify-in-r" });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  }
+  ready(function () {
+    if (window.AlmFlow && typeof AlmFlow.attachContinueBar === "function") {
+      AlmFlow.attachContinueBar({
+        container: "#alm-flow-mount",
+        suggestions: ["forest-plot", "cumulative-subgroup", "gosh", "meta-regression", "bma-tau-priors", "webr-validator"],
+      });
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  }
+  ready(function () {
+    if (window.AlmHero && typeof AlmHero.attachHero === "function") {
+      AlmHero.attachHero({
+        container: "#alm-hero-mount",
+        textarea: "#f-data",
+        adapter: "forest",
+      });
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  }
+  ready(function () {
+    if (window.AlmCitation && typeof AlmCitation.attachAuto === "function") {
+      AlmCitation.attachAuto({ container: "#alm-cite-mount", app: "heterogeneity" });
+    }
+  });
+})();
+</script>
+
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  }
+  ready(function () {
+    if (window.AlmAutosave && typeof AlmAutosave.install === "function") {
+      AlmAutosave.install({ appKey: 'heterogeneity' });
+    }
+  });
+})();
+</script>
+</body>
+</html>

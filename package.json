@@ -1,0 +1,9 @@
+{
+  "name": "heterogeneity-reproducible",
+  "private": true,
+  "description": "Runs the allmeta heterogeneity app in headless Chromium for the validation against metafor",
+  "type": "module",
+  "dependencies": {
+    "playwright": "1.63.0"
+  }
+}

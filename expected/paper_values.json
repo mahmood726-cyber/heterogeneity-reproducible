@@ -1,0 +1,181 @@
+{
+ "source": "Canonical run (full mode): values as printed in the paper.",
+ "values": {
+  "help_pages": {
+   "value": 116,
+   "decimals": 0
+  },
+  "pages_contributing": {
+   "value": 49,
+   "decimals": 0
+  },
+  "pages_timed_out": {
+   "value": 2,
+   "decimals": 0
+  },
+  "meta_analyses": {
+   "value": 88,
+   "decimals": 0
+  },
+  "studies_total": {
+   "value": 2241,
+   "decimals": 0
+  },
+  "k_min": {
+   "value": 4,
+   "decimals": 0
+  },
+  "k_max": {
+   "value": 160,
+   "decimals": 0
+  },
+  "measures": {
+   "value": 23,
+   "decimals": 0
+  },
+  "estimators": {
+   "value": 8,
+   "decimals": 0
+  },
+  "configurations": {
+   "value": 704,
+   "decimals": 0
+  },
+  "dl_refused": {
+   "value": 28,
+   "decimals": 0
+  },
+  "configurations_compared": {
+   "value": 676,
+   "decimals": 0
+  },
+  "checks_total": {
+   "value": 131781,
+   "decimals": 0
+  },
+  "checks_passed": {
+   "value": 131781,
+   "decimals": 0
+  },
+  "checks_failed": {
+   "value": 0,
+   "decimals": 0
+  },
+  "all_pass": {
+   "value": 1,
+   "decimals": 0
+  },
+  "check_formula_holds": {
+   "value": 1,
+   "decimals": 0
+  },
+  "refusals_agree": {
+   "value": 1,
+   "decimals": 0
+  },
+  "all_below_5e-10": {
+   "value": 1,
+   "decimals": 0
+  },
+  "estimates_below_1e-10": {
+   "value": 1,
+   "decimals": 0
+  },
+  "displayed_numbers": {
+   "value": 120720,
+   "decimals": 0
+  },
+  "displayed_fail": {
+   "value": 0,
+   "decimals": 0
+  },
+  "baujat_crosschecks_agree": {
+   "value": 568,
+   "decimals": 0
+  },
+  "baujat_crosschecks_other": {
+   "value": 0,
+   "decimals": 0
+  },
+  "metafor_default_between_1e-5_and_1e-4": {
+   "value": 1,
+   "decimals": 0
+  },
+  "qprofile_upper_beyond_metafor_default": {
+   "value": 1,
+   "decimals": 0
+  },
+  "ex_k": {
+   "value": 13,
+   "decimals": 0
+  },
+  "ex_Q": {
+   "value": 152.2,
+   "decimals": 1
+  },
+  "ex_df": {
+   "value": 12,
+   "decimals": 0
+  },
+  "ex_I2": {
+   "value": 92.1,
+   "decimals": 1
+  },
+  "ex_I2_lo": {
+   "value": 81.9,
+   "decimals": 1
+  },
+  "ex_I2_hi": {
+   "value": 97.7,
+   "decimals": 1
+  },
+  "ex_tau2_lo": {
+   "value": 0.1197,
+   "decimals": 4
+  },
+  "ex_tau2_hi": {
+   "value": 1.1115,
+   "decimals": 4
+  },
+  "ex_tau2_min": {
+   "value": 0.228,
+   "decimals": 3
+  },
+  "ex_tau2_max": {
+   "value": 0.346,
+   "decimals": 3
+  },
+  "ex_tau2_min_est": {
+   "value": "HS",
+   "decimals": 0
+  },
+  "ex_tau2_max_est": {
+   "value": "SJ",
+   "decimals": 0
+  },
+  "ex_rr_reml": {
+   "value": 0.49,
+   "decimals": 2
+  },
+  "ex_rr_reml_hk_lo": {
+   "value": 0.33,
+   "decimals": 2
+  },
+  "ex_rr_reml_hk_hi": {
+   "value": 0.73,
+   "decimals": 2
+  },
+  "ex_rr_reml_pi_lo": {
+   "value": 0.14,
+   "decimals": 2
+  },
+  "ex_rr_reml_pi_hi": {
+   "value": 1.76,
+   "decimals": 2
+  },
+  "ex_baujat_top": {
+   "value": "Hart & Sutherland, 1977",
+   "decimals": 0
+  }
+ }
+}
