@@ -1,0 +1,36 @@
+{
+ "mode": "full",
+ "all_ok": true,
+ "when": "2026-10-07 22:05 UTC",
+ "sha": "4d8b7bca1bf32f780509d0f6d91a9431330f949f",
+ "run_id": "37692506585",
+ "run_url": "https://github.com/mahmood726-cyber/heterogeneity-reproducible/actions/runs/37692506585",
+ "platforms": [
+  {
+   "platform": "Docker (canonical)",
+   "artifact": "full-docker",
+   "ok": true,
+   "summary": "44/44 numbers reproduced"
+  },
+  {
+   "platform": "Linux",
+   "artifact": "full-ubuntu-latest",
+   "ok": true,
+   "summary": "44/44 numbers reproduced"
+  },
+  {
+   "platform": "Windows",
+   "artifact": "full-windows-latest",
+   "ok": true,
+   "summary": "44/44 numbers reproduced"
+  },
+  {
+   "platform": "macOS",
+   "artifact": "full-macos-latest",
+   "ok": true,
+   "summary": "44/44 numbers reproduced"
+  }
+ ],
+ "compare": "success",
+ "mode_note": "Full validation: every number in the paper."
+}
