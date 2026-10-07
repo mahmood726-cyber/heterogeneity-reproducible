@@ -1,7 +1,7 @@
 {
  "mode": "full",
- "all_ok": false,
- "when": "2026-10-07 22:13 UTC",
+ "all_ok": true,
+ "when": "2026-10-07 22:27 UTC",
  "sha": "dd821ff2bb24da0ae620286ec70f07b2e3280294",
  "run_id": "37694013733",
  "run_url": "https://github.com/mahmood726-cyber/heterogeneity-reproducible/actions/runs/37694013733",
@@ -21,8 +21,8 @@
   {
    "platform": "Windows",
    "artifact": "full-windows-latest",
-   "ok": null,
-   "summary": "no report (run did not finish)"
+   "ok": true,
+   "summary": "44/44 numbers reproduced"
   },
   {
    "platform": "macOS",
@@ -31,6 +31,6 @@
    "summary": "44/44 numbers reproduced"
   }
  ],
- "compare": "failure",
+ "compare": "success",
  "mode_note": "Full validation: every number in the paper."
 }
