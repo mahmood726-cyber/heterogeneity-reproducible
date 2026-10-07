@@ -3,6 +3,8 @@
 # installed by the Dockerfile, so this goes straight to the quick reproduction and prints the result.
 set -uo pipefail
 cd "$(dirname "$0")/.."
+# The image installs Playwright in /work/node_modules; the workspace is mounted elsewhere, so link it in.
+if [ ! -e node_modules ] && [ -d /work/node_modules ]; then ln -s /work/node_modules node_modules; fi
 echo
 echo "== heterogeneity-reproducible: quick reproduction (3 meta-analyses, about a minute) =="
 python reproduce.py --quick
