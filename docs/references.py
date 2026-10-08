@@ -74,7 +74,7 @@ DATASETS = {
     "dat.raudenbush1985": "Raudenbush SW. Magnitude of teacher expectancy effects on pupil IQ as a function of the credibility of expectancy induction: a synthesis of findings from 18 experiments. J Educ Psychol. 1984;76(1):85–97. https://doi.org/10.1037/0022-0663.76.1.85",
     "dat.riley2003": "Riley RD, Sutton AJ, Abrams KR, Lambert PC. Sensitivity analyses allowed more appropriate and reliable meta-analysis conclusions for multiple outcomes when missing data was present. J Clin Epidemiol. 2004;57(9):911–24. https://doi.org/10.1016/j.jclinepi.2004.01.018",
     "dat.vanhowe1999": "Van Howe RS. Circumcision and HIV infection: review of the literature and meta-analysis. Int J STD AIDS. 1999;10(1):8–16. https://doi.org/10.1258/0956462991913015",
-    "dat.viechtbauer2021": "Viechtbauer W. Model checking in meta-analysis. In: Schmid CH, Stijnen T, White IR, editors. Handbook of meta-analysis. Boca Raton (FL): CRC Press; 2021. p. 219–54. https://doi.org/10.1201/9781315119403",
+    "dat.viechtbauer2021": "Viechtbauer W. Model checking in meta-analysis. In: Schmid CH, Stijnen T, White IR, editors. Handbook of meta-analysis. Boca Raton (FL): CRC Press; 2021. p. 219–54. https://doi.org/10.1201/9781315119403-11",
 }
 # datasets that share a source with another (cite once): dat.colditz1994 = dat.bcg; dat.hine1989 data are also in Normand 1999
 SAME_AS = {"dat.colditz1994": "dat.bcg"}
