@@ -201,6 +201,7 @@ def main():
         for b in sorted(c["reml"]["baujat"], key=lambda b: -b["y"])[:3]:   # the three most influential trials
             ax.annotate(b["label"], (b["x"], b["y"]), fontsize=7, xytext=(-6, 5), textcoords="offset points", ha="right")
         ax.set_xlabel("Squared Pearson residual (REML)"); ax.set_ylabel("Influence on the pooled estimate")
+        lo, hi = ax.get_ylim(); ax.set_ylim(lo, hi + 0.12 * (hi - lo))   # headroom so the top label stays inside the axes
         ax.set_title("B. Baujat plot (REML)", fontsize=9.5); ax.legend(fontsize=7.5, frameon=False, loc="upper left")
         fig.suptitle(f"Figure 2. Worked example: BCG vaccine ({k_of[EXAMPLE]} trials); the app (blue) over metafor", fontsize=10)
         fig.tight_layout(); fig.savefig(out / "figure2_worked_example.png", dpi=300, metadata=meta); plt.close(fig)
@@ -226,7 +227,7 @@ def main():
                 color="#1b6ca8" if kind_of[q] == "REL" else "#c27c0e")
     ax.axvline(-9, color="#444444", ls="--", lw=0.8)
     ax.set_yticks(range(len(qs)), [f"{PRETTY.get(q, q)} ({'relative' if kind_of[q] == 'REL' else 'absolute'})" for q in qs]); ax.invert_yaxis(); ax.set_xlim(-17.5, -7)
-    ax.set_xlabel("log10 largest difference from metafor in one meta-analysis (exact agreement shown at -17)")
+    ax.set_xlabel("log10 largest difference from metafor in one meta-analysis\n(exact agreement shown at -17)")
     ax.set_title(f"Figure 3. App versus metafor: {len(ids)} meta-analyses, {len(KEYS)} τ² estimators\n(each point: one meta-analysis; dashed: tolerance 1e-9)", fontsize=9.5)
     ax.grid(axis="x", color="#eeeeee", lw=0.6)
     fig.tight_layout(); fig.savefig(out / "figure3_agreement.png", dpi=300, metadata=meta); plt.close(fig)
