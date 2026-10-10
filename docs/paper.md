@@ -110,7 +110,7 @@ The author develops allmeta. [AUTHOR TO CONFIRM: no other competing interests.]
 5. Sidik K, Jonkman JN. Simple heterogeneity variance estimation for meta-analysis. J R Stat Soc Ser C Appl Stat. 2005;54(2):367–84. https://doi.org/10.1111/j.1467-9876.2005.00489.x
 6. Viechtbauer W. Conducting meta-analyses in R with the metafor package. J Stat Softw. 2010;36(3):1–48. https://doi.org/10.18637/jss.v036.i03
 7. Viechtbauer W. metafor: Meta-Analysis Package for R. R package version 5.2-1 [software]. CRAN; 2026. https://doi.org/10.32614/CRAN.package.metafor
-8. Ahmad M. allmeta — open browser-only tools for evidence synthesis. Version [AUTHOR TO COMPLETE: release containing the validated commit] [software]. Zenodo; 2026. https://doi.org/[AUTHOR TO COMPLETE]
+8. Ahmad M. allmeta — open browser-only tools for evidence synthesis. Version 1.2.1 [software]. Zenodo; 2026. https://doi.org/10.5281/zenodo.23288388
 9. Morris CN. Parametric empirical Bayes inference: theory and applications. J Am Stat Assoc. 1983;78(381):47–55. https://doi.org/10.1080/01621459.1983.10477920
 10. Viechtbauer W. Confidence intervals for the amount of heterogeneity in meta-analysis. Stat Med. 2007;26(1):37–52. https://doi.org/10.1002/sim.2514
 11. Hartung J, Knapp G. A refined method for the meta-analysis of controlled clinical trials with binary outcome. Stat Med. 2001;20(24):3875–89. https://doi.org/10.1002/sim.1009
