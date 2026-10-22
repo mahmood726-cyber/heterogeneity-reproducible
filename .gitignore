@@ -8,3 +8,13 @@ outputs/
 results/
 venv/
 node_modules/
+PROGRESS.md
+*.prev-*/
+
+# Local scratch and test caches must not enter release archives.
+.tmp/
+tmp/
+temp/
+.pytest_cache/
+_recut_test_*/
+*.tmp/

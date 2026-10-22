@@ -11,9 +11,8 @@ identifiers:
     value: 10.5281/zenodo.23415772
     description: "Archived release v1.0.0 (Zenodo)"
 license: MIT
-version: 1.0.0
-doi: 10.5281/zenodo.23415772
-date-released: 2026-10-16
+version: 1.1.0
+date-released: 2026-10-22
 keywords:
   - meta-analysis
   - heterogeneity
@@ -28,6 +27,12 @@ references:
       - family-names: Ahmad
         given-names: Mahmood
     repository-code: "https://github.com/mahmood726-cyber/allmeta"
+    version: "v1.8.0"
+    doi: 10.5281/zenodo.23515177
+    identifiers:
+      - type: doi
+        value: 10.5281/zenodo.20516880
+        description: "allmeta concept DOI (all versions)"
   - type: software
     title: "metafor: Meta-Analysis Package for R"
     version: "5.2-1"

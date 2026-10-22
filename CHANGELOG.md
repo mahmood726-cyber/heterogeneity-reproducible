@@ -1,9 +1,33 @@
 # Changelog
 
-## Validated version
+## v1.1.0 — 2026-10-22
 
-This repository validates the allmeta heterogeneity app at **allmeta commit `7cb5975429531791d1879e80cf5c05f765e82c21`**, the merge of
-[allmeta PR #82](https://github.com/mahmood726-cyber/allmeta/pull/82). `app/` is byte-identical to that commit.
+**Release run passed (RUN_EXIT 0).** Updated the app and its runtime/data dependencies to
+allmeta v1.8.0, commit `1cb3f8409c7af75ed41f7e1811f9c502f900fc79`,
+release DOI 10.5281/zenodo.23515177 (concept 10.5281/zenodo.20516880).
+
+The original corpus, R reference code, expected values and tolerances are
+byte-identical to the pre-recut archive. The display runner follows the current
+card labels, retaining the original Q-based I² point and both model-based interval
+endpoints. The original targets remain 131,781 numerical and 120,720 display
+checks; the final run met both targets. No numerical plus suite applies (APP.txt:
+PR #163, strict numeric input usability).
+
+Added portable runner instructions, SHA-256 manifests and verification, output
+preservation, and an explicit extras scope note. Desktop R metafor 5.2-1 remains
+the reference; the bundled optional live webR metafor 4.8-0 is documented separately.
+All app source bytes, including manifests and references, are copied unchanged.
+
+Quick: 4934/4934 numerical, 4480/4480 display, 11/11 expected values. Full: 131781/131781 numerical, 120720/120720 display, 44/44 expected values.
+No expected count differs from the final log. R 4.6.0 (metafor 5.2.1, metadat 1.6.0), Node 24.16.0 (Playwright 1.59.1), Python 3.13.13, Windows AMD64; Chromium 148.0.7778.96.
+The alternate tool versions were permitted with `--allow-version-mismatch`;
+see RECUT_NOTES.md and the [release log](provenance/run_plan-2026-10-22-release.log).
+
+## v1.0.0 — historical validated version
+
+The previous archive validated allmeta commit
+`7cb5975429531791d1879e80cf5c05f765e82c21`, the merge of
+[allmeta PR #82](https://github.com/mahmood726-cyber/allmeta/pull/82).
 
 ## Earlier versions of the app (history)
 
@@ -23,5 +47,5 @@ available at full precision from one function (`window.__almHetCompute`), which 
 
 ## This repository
 
-- **Unreleased:** validation of the app against metafor 5.2-1 on every intercept-only `rma()` fit in the examples of metadat 1.6-0
+- **v1.0.0 (historical):** validation of the app against metafor 5.2-1 on every intercept-only `rma()` fit in the examples of metadat 1.6-0
   (88 meta-analyses, 49 datasets) with all eight τ² estimators: all 131,781 checks pass.

@@ -48,7 +48,8 @@ def check_versions(strict):
         if got != want: problems.append(f"{p} {got} (pinned {want})")
     want_node = (ROOT / ".nvmrc").read_text().strip()
     if nv != want_node: problems.append(f"node {nv} (pinned {want_node})")
-    pw = ROOT / "node_modules" / "playwright" / "package.json"
+    pw_dir = Path(os.environ["PLAYWRIGHT_MODULE"]).resolve() if os.environ.get("PLAYWRIGHT_MODULE") else ROOT / "node_modules" / "playwright"
+    pw = pw_dir / "package.json"
     if not pw.exists(): sys.exit("Playwright missing: run  npm ci  and  npx playwright install chromium")
     pwv = json.loads(pw.read_text())["version"]
     if pwv != PLAYWRIGHT: problems.append(f"playwright {pwv} (pinned {PLAYWRIGHT})")

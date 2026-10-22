@@ -1,0 +1,622 @@
+path,byte_start,byte_end,line,category,action,reason
+.github/workflows/reproduce.yml,4349,4356,120,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+.github/workflows/reproduce.yml,4531,4538,122,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+.github/workflows/reproduce.yml,5090,5112,139,mail-address,retained-technical,environment-variable interpolation in authenticated remote URL; no embedded value
+.github/workflows/reproduce.yml,6022,6029,152,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+.github/workflows/reproduce.yml,6111,6115,154,account-candidate,retained-technical,technical identifier or ordinary prose; not a local account
+.github/workflows/reproduce.yml,6164,6168,155,account-candidate,retained-technical,technical identifier or ordinary prose; not a local account
+.github/workflows/reproduce.yml,6176,6229,155,mail-address,retained-automation,public no-reply commit identity; not a personal address
+.github/workflows/reproduce.yml,6205,6209,155,account-candidate,retained-technical,technical identifier or ordinary prose; not a local account
+.zenodo.json,2189,2196,9,account-candidate,retained-attribution,published author or copyright credit; not a local account
+.zenodo.json,2502,2509,25,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+.zenodo.json,2659,2666,30,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+APP_SOURCE_FILES.json,46,53,2,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+CHANGELOG.md,1703,1710,30,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+CITATION.cff,339,346,7,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+CITATION.cff,384,391,8,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+CITATION.cff,891,898,28,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+CITATION.cff,940,947,29,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+LICENSE,34,41,3,account-candidate,retained-attribution,published author or copyright credit; not a local account
+README.md,63,70,3,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+README.md,170,177,3,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+README.md,342,349,4,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+README.md,695,702,7,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+README.md,3347,3354,49,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+README.md,3501,3508,50,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+README.md,4968,4972,74,account-candidate,retained-technical,technical identifier or ordinary prose; not a local account
+README.md,6167,6174,94,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+README.md,8078,8085,121,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+README.md,17201,17208,245,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+RUN_PLAN.cmd,193,197,6,account-candidate,retained-technical,technical identifier or ordinary prose; not a local account
+RUN_PLAN_EXPECTED.md,1651,1655,31,account-candidate,retained-technical,technical identifier or ordinary prose; not a local account
+RUN_PLAN_EXPECTED.md,1793,1797,32,account-candidate,retained-technical,technical identifier or ordinary prose; not a local account
+RUN_PLAN_EXPECTED.md,3762,3766,54,account-candidate,retained-technical,technical identifier or ordinary prose; not a local account
+analysis/make_outputs.py,18728,18735,251,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+app/heterogeneity/validate/MANIFEST.json,35,42,2,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/heterogeneity/validate/adapter.js,672,679,9,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/heterogeneity/validate/adapter.js,9076,9083,123,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,200,215,7,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,356,383,9,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,458,479,10,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,5468,5472,51,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,5952,5967,54,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,17207,17211,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,17222,17226,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,17277,17281,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,17295,17299,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,17337,17341,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,17357,17361,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,21236,21240,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,21254,21258,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,34464,34468,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,34480,34484,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,34495,34499,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,34508,34512,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,35074,35078,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,35089,35093,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,42187,42191,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,42629,42633,86,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,109421,109441,89,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,118772,118792,112,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,168624,168645,129,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,169103,169107,134,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,182391,182415,138,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,184291,184311,163,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,196676,196690,203,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,277040,277061,275,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,315094,315115,335,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/hub/shared/vendor/jspdf.min.js,320617,320635,361,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,227755,227759,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,227900,227904,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,235704,235708,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,235730,235734,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,235756,235760,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,235786,235790,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,235808,235812,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,275775,275779,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,304077,304083,1823,home-path,retained-upstream,virtual runtime home; byte preservation required
+app/r-shiny/shinylive/webr/R.js,304087,304091,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,310613,310617,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,358672,358676,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,358813,358817,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,358864,358868,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,358907,358911,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,358960,358964,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,365295,365299,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,370791,370795,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,422427,422431,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,422450,422454,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,422480,422484,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,422507,422511,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,422533,422537,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,422554,422558,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,422577,422581,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,422638,422642,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,422659,422663,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,427211,427215,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,427248,427252,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,427321,427325,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,499692,499696,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,500131,500135,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,500143,500147,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,500165,500169,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,500364,500368,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,505743,505747,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,508199,508203,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,508209,508213,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,508228,508232,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,508257,508263,1823,home-path,retained-upstream,virtual runtime home; byte preservation required
+app/r-shiny/shinylive/webr/R.js,508267,508271,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,537630,537634,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,537663,537667,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,539418,539422,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,540150,540154,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,540413,540417,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,540493,540497,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,540665,540669,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,540745,540749,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,540913,540917,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,540993,540997,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,541804,541808,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,542100,542104,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,542449,542453,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,542531,542535,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,542699,542703,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,542781,542785,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,542955,542959,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,543037,543041,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,543208,543212,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,543290,543294,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,543464,543468,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,543546,543550,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,543723,543727,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,543805,543809,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,543985,543989,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,544067,544071,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,544246,544250,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,544328,544332,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,544504,544508,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,544586,544590,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,544921,544925,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,545352,545356,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,545610,545614,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,545790,545794,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,545953,545957,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,546571,546575,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,546807,546811,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,546886,546890,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,547054,547058,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,547133,547137,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,547286,547290,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,547692,547696,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,547953,547957,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,548035,548039,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,548198,548202,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,548280,548284,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,548447,548451,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,548529,548533,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,548701,548705,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,548783,548787,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,549146,549150,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,549471,549475,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,549750,549754,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,549839,549843,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,550841,550845,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,551141,551145,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,551410,551414,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,551494,551498,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,552748,552752,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,553104,553108,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,553359,553363,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,553521,553525,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,555782,555786,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,556133,556137,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,556393,556397,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,556580,556584,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,556707,556711,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,560062,560066,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,562780,562784,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,564982,564986,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,566072,566076,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,566564,566568,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,567150,567154,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,567453,567457,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,568537,568541,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,568895,568899,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,569157,569161,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,569493,569497,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,569612,569616,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,569734,569738,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,569859,569863,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,570046,570050,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,570221,570225,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,570481,570485,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,570800,570804,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,570917,570921,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,571037,571041,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,571160,571164,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,573121,573125,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,573470,573474,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,573723,573727,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,573875,573879,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,574301,574305,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,575486,575490,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,575808,575812,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,575890,575894,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,576068,576072,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,576150,576154,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,576325,576329,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,576407,576411,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,576586,576590,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,576668,576672,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,577561,577565,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,577863,577867,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,578375,578379,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,578508,578512,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,578702,578706,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,578835,578839,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,579412,579416,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,579591,579595,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,580024,580028,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,580181,580185,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,580604,580608,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,580901,580905,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,581174,581178,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,581281,581285,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,581470,581474,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,581577,581581,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,582547,582551,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,582623,582627,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,582841,582845,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,582913,582917,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,586724,586728,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,586987,586991,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,587022,587026,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,587061,587065,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,587245,587249,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,587277,587281,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,587320,587324,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,587462,587466,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,587514,587518,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,587687,587691,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,587761,587765,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,587806,587810,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,588023,588027,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,588055,588059,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,588094,588098,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,590383,590387,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,590540,590544,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,590911,590915,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,591034,591038,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,591075,591079,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,594963,594967,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,595122,595126,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,599678,599682,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,600126,600130,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,600210,600214,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,600320,600324,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,600395,600399,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,600440,600444,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,600547,600551,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,601237,601241,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,601342,601346,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,601460,601464,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,601695,601699,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,602046,602050,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,602486,602490,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,602800,602804,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,603041,603045,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,615606,615610,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,615656,615660,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,615798,615802,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,615848,615852,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,615946,615950,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,615994,615998,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,616103,616107,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,616150,616154,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,616260,616264,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,616309,616313,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,616425,616429,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,616478,616482,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,616595,616599,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,616645,616649,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,616757,616761,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,616805,616809,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,627868,627872,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,628032,628036,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,628298,628302,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,628381,628385,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,628593,628597,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,628676,628680,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,659101,659105,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,659537,659541,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,659836,659840,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,660144,660148,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,660427,660431,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,696382,696386,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,696443,696447,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,701893,701897,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,704107,704111,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,706266,706270,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,722543,722547,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,729681,729685,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.js,729704,729708,1823,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,47698,47702,216,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,47977,47981,219,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,48019,48023,219,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,51461,51465,229,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,216516,216520,574,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,246649,246653,574,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,246760,246764,574,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,502482,502486,575,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6489451,6489455,29456,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6510137,6510141,29466,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6529963,6529967,29466,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6531790,6531794,29466,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6535677,6535681,29466,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6539788,6539792,29466,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6539823,6539827,29466,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6544536,6544540,29466,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6544551,6544555,29466,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6545003,6545007,29466,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6549004,6549008,29466,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6552560,6552564,29467,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6552622,6552626,29467,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6553255,6553259,29467,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6557942,6557946,29471,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6738621,6738625,29474,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6738636,6738640,29474,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,6824439,6824455,29885,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7046276,7046280,30654,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7046309,7046313,30655,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7047425,7047429,30689,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7047439,7047443,30689,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7050696,7050732,30769,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7050764,7050784,30770,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7053653,7053657,30829,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7053670,7053674,30829,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7054337,7054341,30841,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7136884,7136888,31463,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7137137,7137141,31470,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7138936,7138940,31521,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7138996,7139000,31522,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7141499,7141503,31601,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7142151,7142155,31618,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,7142210,7142214,31619,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,8439332,8439354,36544,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,8439381,8439417,36545,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,8439449,8439469,36546,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,8668342,8668378,37320,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,8668410,8668430,37321,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,8825583,8825619,38082,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,8825651,8825671,38083,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,9324989,9324993,40425,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,9383092,9383128,41054,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,9383160,9383180,41055,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,9865723,9865747,42977,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,9865774,9865810,42978,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,9865842,9865862,42979,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,9889116,9889120,43232,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,10642690,10642726,46793,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,10642758,10642778,46794,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,11489840,11489843,50227,credential-prefix,retained-upstream,short byte prefix in binary data; not an identified credential
+app/r-shiny/shinylive/webr/R.wasm,12052597,12052616,52327,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,12052644,12052666,52328,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,12052693,12052729,52329,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,12052761,12052781,52330,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,12124197,12124233,52696,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,12124265,12124285,52697,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,12354420,12354423,54309,credential-prefix,retained-upstream,short byte prefix in binary data; not an identified credential
+app/r-shiny/shinylive/webr/R.wasm,13949908,13949923,60136,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,13949940,13949970,60137,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,13950021,13950048,60140,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,13954890,13954894,60171,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,14379098,14379134,63801,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,14379166,14379186,63802,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,14537029,14537065,64419,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,14537097,14537117,64420,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,14537787,14537791,64433,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,14537811,14537815,64433,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,14539751,14539755,64471,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,14539893,14539897,64474,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,14539908,14539912,64474,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,14555205,14555209,64572,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,14556784,14556788,64614,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16882260,16882264,73370,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16882270,16882274,73370,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16884170,16884174,73371,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16884465,16884469,73371,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16884476,16884480,73371,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16884487,16884491,73371,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16884498,16884502,73371,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16884522,16884526,73371,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16884533,16884537,73371,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16884623,16884627,73371,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16884729,16884733,73371,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16884807,16884811,73371,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16884890,16884894,73371,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16885096,16885100,73371,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16903089,16903093,73904,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16904786,16904822,73975,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16904854,16904874,73976,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16906367,16906371,74005,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,16914274,16914278,74153,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,18024306,18024310,79703,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,18043178,18043199,79838,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,18043260,18043275,79839,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,18043891,18043912,79857,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,18434244,18434248,81345,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/R.wasm,18434285,18434289,81345,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/library.data.gz,9127521,9127524,35080,credential-prefix,retained-upstream,short byte prefix in binary data; not an identified credential
+app/r-shiny/shinylive/webr/library.data.gz,11657253,11657256,44924,credential-prefix,retained-upstream,short byte prefix in binary data; not an identified credential
+app/r-shiny/shinylive/webr/library.js.metadata,9730,9734,1,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/library.js.metadata,9824,9828,1,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/library.js.metadata,9916,9920,1,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/library.js.metadata,9923,9927,1,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/library.js.metadata,10007,10011,1,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/library.js.metadata,10102,10106,1,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/library.js.metadata,10198,10202,1,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/library.js.metadata,10207,10211,1,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/library.js.metadata,10293,10297,1,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/packages/mathjaxr/mathjaxr_2.0-0.tgz,2071077,2071080,8051,credential-prefix,retained-upstream,short byte prefix in binary data; not an identified credential
+app/r-shiny/shinylive/webr/packages/mathjaxr/mathjaxr_2.0-0.tgz,2853782,2853785,11000,credential-prefix,retained-upstream,short byte prefix in binary data; not an identified credential
+app/r-shiny/shinylive/webr/packages/metadat/metadat_1.4-0.tgz,366197,366200,1341,credential-prefix,retained-upstream,short byte prefix in binary data; not an identified credential
+app/r-shiny/shinylive/webr/packages/metadat/metadat_1.4-0.tgz,373894,373902,1372,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/packages/numDeriv/numDeriv_2016.8-1.1.tgz,43242,43250,179,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/fonts/fonts.conf,117,123,5,home-path,retained-upstream,virtual runtime home; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/fonts/fonts.conf,127,131,5,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,432,436,11,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,993,1003,25,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,2671,2681,51,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,4746,4756,82,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,7151,7161,117,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,8547,8557,139,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,9953,9963,161,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,11363,11373,183,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,13434,13444,214,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,14816,14826,236,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,16230,16240,258,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,17786,17796,282,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,18743,18753,299,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,20139,20149,321,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,22202,22212,352,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,23462,23472,372,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,24998,25008,396,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,26504,26514,420,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,27753,27763,441,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,29953,29963,473,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,31401,31411,495,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,32900,32910,518,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,34367,34377,541,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,35615,35625,561,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,36857,36867,581,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,38792,38802,610,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,39597,39607,625,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,41017,41027,647,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,42346,42356,668,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,43667,43677,689,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,45760,45770,720,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,47720,47730,750,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,49690,49700,780,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,51116,51126,802,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,52698,52708,826,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,54267,54277,851,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,56219,56229,881,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,59026,59036,922,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,60951,60961,951,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,62876,62886,980,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,64284,64294,1002,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,65587,65597,1023,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,67551,67561,1053,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,69515,69525,1083,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,71491,71501,1113,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,72851,72861,1135,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,73749,73759,1151,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,75089,75099,1173,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,75977,75987,1189,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,78032,78042,1220,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,80114,80118,1250,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,80190,80200,1252,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,82280,82284,1282,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,82356,82366,1284,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,83359,83369,1301,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,84214,84224,1316,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,86202,86212,1346,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,88214,88224,1376,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,89831,89841,1401,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,90946,90956,1420,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,92990,93000,1450,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,94366,94376,1472,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,95677,95687,1493,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,97863,97873,1525,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,100134,100144,1558,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,101176,101186,1576,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,103146,103156,1606,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,105148,105158,1636,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,106368,106378,1656,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,108281,108291,1685,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,108970,108980,1698,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,109798,109808,1712,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,111423,111433,1737,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,113481,113491,1767,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,115653,115663,1799,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,116690,116700,1816,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,118888,118898,1848,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,119891,119901,1865,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,121923,121933,1895,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,122855,122865,1911,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,124800,124810,1940,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,126746,126756,1970,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,129046,129056,2004,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,130394,130404,2026,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,131292,131302,2042,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,132595,132605,2063,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,133456,133466,2078,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,135618,135628,2110,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,136584,136594,2126,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,138645,138655,2157,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,139527,139537,2173,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,141496,141506,2202,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,143682,143692,2234,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,144664,144674,2250,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,145715,145725,2267,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,147796,147806,2298,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,148738,148748,2314,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,150690,150700,2344,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,151493,151503,2359,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,153513,153523,2389,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,155661,155671,2421,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,156597,156607,2437,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,158680,158690,2468,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,160769,160779,2499,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,162838,162848,2530,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,163820,163830,2546,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,166019,166029,2579,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,166820,166830,2594,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,168754,168764,2624,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,169581,169591,2639,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,171573,171583,2669,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,172301,172311,2683,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,174233,174243,2713,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,176165,176175,2743,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,176954,176964,2758,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,177753,177763,2773,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,179753,179763,2803,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,180853,180863,2821,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,181961,181971,2839,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,182808,182818,2854,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,184772,184782,2884,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,186695,186705,2913,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,187505,187515,2927,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,188377,188387,2943,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,190367,190377,2973,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,191264,191274,2988,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,192190,192200,3004,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,194224,194234,3034,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,196258,196268,3064,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,197168,197178,3080,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,198025,198035,3095,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,200009,200019,3125,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,202078,202088,3156,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,203018,203028,3172,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,203881,203891,3187,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,204744,204754,3202,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,206750,206760,3232,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,208756,208766,3262,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,209668,209678,3278,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,211763,211773,3309,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,212720,212730,3326,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,214742,214752,3356,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,216039,216049,3377,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,218025,218035,3407,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,218878,218888,3422,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,220951,220961,3453,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,221824,221834,3468,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,223840,223850,3498,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem,225931,225941,3529,credential-prefix,retained-upstream,public CA certificate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/usr/lib/R/doc.data.gz,3176648,3176651,12040,credential-prefix,retained-upstream,short byte prefix in binary data; not an identified credential
+app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/libs.data.gz,922831,922837,3382,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/help.data.gz,93718,93721,353,credential-prefix,retained-upstream,short byte prefix in binary data; not an identified credential
+app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/help.data.gz,110048,110051,419,credential-prefix,retained-upstream,short byte prefix in binary data; not an identified credential
+app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/parallel.data.gz,173178,173181,622,credential-prefix,retained-upstream,short byte prefix in binary data; not an identified credential
+app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/help.data.gz,709395,709398,2585,credential-prefix,retained-upstream,short byte prefix in binary data; not an identified credential
+app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/translations/DESCRIPTION,143,163,5,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Italic.ttf,51238,51248,424,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Italic.ttf,51625,51635,427,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Italic.ttf,169475,169485,1134,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Regular.ttf,52210,52220,360,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Regular.ttf,52604,52614,363,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Regular.ttf,151721,151731,904,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSansMono-Regular.ttf,253887,253904,1584,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-Regular.ttf,432756,432765,2896,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/vfs/usr/share/proj.data.gz,26900,26903,141,credential-prefix,retained-upstream,short byte prefix in binary data; not an identified credential
+app/r-shiny/shinylive/webr/webr-worker.js,26949,26953,2,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/webr-worker.js,27891,27895,2,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/webr-worker.js,29738,29742,3,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/webr-worker.js,29802,29806,3,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/r-shiny/shinylive/webr/webr-worker.js,133525,133542,35,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/webr-worker.js,133575,133593,36,mail-address,retained-upstream,upstream attribution or binary candidate; byte preservation required
+app/r-shiny/shinylive/webr/webr.mjs,59390,59396,2,home-path,retained-upstream,virtual runtime home; byte preservation required
+app/r-shiny/shinylive/webr/webr.mjs,59400,59404,2,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/alm-validate.js,167,171,3,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/alm-validate.js,309,313,4,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/app-flow.js,1363,1367,32,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/autosave.js,91,95,4,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/autosave.js,2141,2145,58,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/build-info.js,1067,1074,28,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/citation.js,968,975,28,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/citation.js,1069,1076,29,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/citation.js,1167,1174,29,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/ma-pooled-v1.js,292,296,7,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/ma-studies-v1.js,12550,12554,350,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/ma-studies-v1.js,12613,12617,351,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/ma-studies-v1.js,14569,14573,398,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/ma-studies-v1.js,24099,24103,608,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/truthcert-export.js,157,161,4,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+app/shared/truthcert-export.js,305,309,6,account-candidate,retained-upstream,upstream source candidate; byte preservation required
+bench/install_r_packages.R,994,998,13,account-candidate,retained-technical,technical identifier or ordinary prose; not a local account
+docs/paper.md,101,108,3,account-candidate,retained-attribution,published author or copyright credit; not a local account
+docs/paper.md,1832,1839,27,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+docs/paper.md,2621,2625,35,account-candidate,retained-technical,technical identifier or ordinary prose; not a local account
+docs/paper.md,6205,6212,87,account-candidate,retained-public,public source URL or repository-owner setting; not a local account
+docs/paper.md,6718,6725,90,account-candidate,retained-public,public source URL or repository-owner setting; not a local account

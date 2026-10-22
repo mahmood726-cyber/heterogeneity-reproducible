@@ -6,6 +6,46 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Latest verified run](https://img.shields.io/badge/latest%20verified%20run-results%20page-2c5e8a)](https://mahmood726-cyber.github.io/heterogeneity-reproducible/)
 
+## What's new in v1.1.0
+
+Release date: **2026-10-22**. **Release run passed (RUN_EXIT 0).**
+
+| Run | Numerical checks | Display checks | Expected values |
+|---|---:|---:|---:|
+| Quick | 4934/4934 | 4480/4480 | 11/11 |
+| Full | 131781/131781 | 120720/120720 | 44/44 |
+
+Measured in the [final release log](provenance/run_plan-2026-10-22-release.log). No numerical or display
+failures; all expected counts agree. R 4.6.0 (metafor 5.2.1, metadat 1.6.0), Node 24.16.0 (Playwright 1.59.1), Python 3.13.13, Windows AMD64; Chromium 148.0.7778.96.
+The runner used `--allow-version-mismatch`; exact deviations are retained in
+the log and [RECUT_NOTES.md](RECUT_NOTES.md#finalize-2026-10-22). This is a
+Windows runner result; no new Docker or cross-platform pass is claimed.
+
+- The app snapshot now contains byte-exact files from **allmeta v1.8.0**, commit
+  `1cb3f8409c7af75ed41f7e1811f9c502f900fc79`, release DOI
+  [10.5281/zenodo.23515177](https://doi.org/10.5281/zenodo.23515177)
+  (concept DOI [10.5281/zenodo.20516880](https://doi.org/10.5281/zenodo.20516880)).
+- The original corpus, reference R code, expected values and tolerances are preserved.
+  The original numerical target is **131,781/131,781**; the original displayed-number
+  target is **120,720/120,720**. The final v1.1.0 run met both unchanged targets.
+- Display lookups follow the current I², modified HK and prediction-interval cards,
+  while retaining the original quantities, checks and counts. The new model-based
+  I² point is outside this original display audit.
+- Newly loaded assets include the plot PDF dependency, glossary translations,
+  validation widget and stored-reference corpus, and the lazy webR runtime with
+  the metafor package dependency closure. The optional live webR uses **metafor 4.8-0**;
+  the original desktop validation still requires **metafor 5.2-1 / metadat 1.6-0**.
+- No numerical plus suite applies: APP.txt identifies PR #163 as strict numeric input
+  usability only. See [validation-plus/README.md](validation-plus/README.md).
+- Portable [RUN_PLAN.cmd](RUN_PLAN.cmd), its [expected outcomes](RUN_PLAN_EXPECTED.md),
+  and SHA-256 inventories make the recut reviewable. Prior outputs are renamed
+  before re-running. [RECUT_NOTES.md](RECUT_NOTES.md) lists every change and the
+  preserved-corpus CRLF provenance exception.
+
+The DOI badge above identifies **archive v1.0.0**. A new archive DOI has not been
+assigned here. The paper, screenshots and historical results retained under
+`docs/` describe v1.0.0; they are not evidence of a completed v1.1.0 release run.
+
 The [allmeta](https://github.com/mahmood726-cyber/allmeta) **heterogeneity app** quantifies between-study heterogeneity in a
 pairwise meta-analysis offline in the browser ([live](https://mahmood726-cyber.github.io/allmeta/heterogeneity/)). From one row per
 study (label, estimate, standard error) it reports:
@@ -18,14 +58,41 @@ study (label, estimate, standard error) it reports:
   with the scaling factor floored at 1; the 95% prediction interval on t(k−1).
 - **Influence:** leave-one-out estimates (τ² re-estimated) and a Baujat plot; CSV, JSON and Markdown export.
 
-This repository validates every one of those numbers against the R package **metafor**, on every random- or fixed-effects model
-without moderators fitted in the examples of the dataset package **metadat**, and checks every number in the accompanying
-F1000Research article.
+This repository provides validation against the R package **metafor**, on every random- or fixed-effects model without
+moderators fitted in the examples of **metadat**, and checks the original numbers in the accompanying F1000Research article.
+The v1.1.0 rerun on the updated app passed on 2026-10-22; see the final release log above.
+
+## Reproduce v1.1.0 on the Windows runner
+
+From this archive's root, with Python, Node, R and the documented dependencies
+available, run:
+
+~~~cmd
+RUN_PLAN.cmd > ..\run_plan.log 2>&1
+~~~
+
+`R_BIN` optionally supplies the R executable directory; `R_LIBS_USER` and
+`R_LIBS` are inherited. `PLAYWRIGHT_MODULE` optionally supplies an existing
+Playwright package directory. No machine-specific path is embedded in the plan.
+See [RUN_PLAN_EXPECTED.md](RUN_PLAN_EXPECTED.md) for every environment variable,
+step, expected count, and the distinction between the pinned environment and the
+coordinator's alternate Playwright version. The plan exits on unexpected failure.
+
+The plan uses the original `python reproduce.py` pipeline in quick and full
+modes, then prints measured N/N from the output files. It does not rebuild the
+corpus or rewrite expected values. The completed original numerical and browser
+checks are recorded in the [2026-10-22 release log](provenance/run_plan-2026-10-22-release.log).
+
+Verify the published file hashes with `python scripts/recut.py manifest`.
+After an intentional documentation change, regenerate with
+`python scripts/recut.py manifest --write`, then verify again. Regeneration
+refuses to accept a change to any protected original. When the source checkout
+is available, add `--upstream ../allmeta` to compare all app bytes.
 
 ## Reproduce in one click
 
-**1. See the latest verified run (nothing to run).** The [results page](https://mahmood726-cyber.github.io/heterogeneity-reproducible/)
-is republished by CI after every push to `main`: the PASS/FAIL table for every number in the paper, the result on Docker, Linux,
+**1. See the CI results (nothing to run).** The [results page](https://mahmood726-cyber.github.io/heterogeneity-reproducible/)
+is republished by CI after every push to `main`; check the run commit before attributing it to v1.1.0: the PASS/FAIL table for every number in the paper, the result on Docker, Linux,
 Windows and macOS, the cross-platform comparison, and the figures.
 
 **2. Open in GitHub Codespaces (one click).** Click the *Open in GitHub Codespaces* badge above, then *Create codespace*.
@@ -65,8 +132,14 @@ Without Docker you need R 4.6.0, Node 24.15.0 and Python 3.12 or 3.13:
 
 ## What it shows
 
-The app is validated at **allmeta commit `7cb5975`** (the merge of
-[allmeta PR #82](https://github.com/mahmood726-cyber/allmeta/pull/82)). `app/` is byte-identical to that commit.
+The current `app/` snapshot is byte-identical to its corresponding files at
+**allmeta v1.8.0**, commit `1cb3f8409c7af75ed41f7e1811f9c502f900fc79`.
+**v1.1.0 results (2026-10-22):** Quick: 4934/4934 numerical, 4480/4480 display, 11/11 expected values. Full: 131781/131781 numerical, 120720/120720 display, 44/44 expected values.
+All checks passed; displayed failures: 0 in both modes.
+
+The table below records the **historical v1.0.0 results**, at allmeta commit
+`7cb5975429531791d1879e80cf5c05f765e82c21` (PR #82). It supplies the unchanged
+expectations for the rerun; it does not report a v1.1.0 pass.
 
 | | Result |
 |---|---|
@@ -89,10 +162,13 @@ univariate model is lost.
   meta-analysis; the same data fitted again (another estimator, a plot) counts once. Included: at least 2 studies, every variance
   positive. `corpus/corpus_log.tsv` lists every help page and what happened to it. This takes about half an hour, so the corpus is
   committed in `corpus/`; `python reproduce.py --rebuild-corpus` regenerates it and stops unless it is byte-identical.
-- **The app** (`app/`, byte-identical to the validated allmeta commit) runs unchanged in headless Chromium. Each meta-analysis is typed
+- **The app** (`app/`, byte-identical to the allmeta v1.8.0 source files) runs unchanged in headless Chromium. Each meta-analysis is typed
   in the app's own input format (`label, estimate, SE`) and analysed by the page's own parser and statistics
   (`window.__almHetCompute`, the function the page renders from) for each of the eight estimators. The page is then rendered and
-  every number it displays is checked against the computed value, rounded as displayed.
+  the original displayed quantities are checked against the computed values, rounded as displayed.
+  The current page also shows a model-based I² point; the original audit checks the Q-based point and both model-based CI
+  endpoints, preserving its 120,720-check scope. The upstream in-page replay additionally checks that new point and has
+  121,424 display checks (120,720 + 704 configurations); it is not substituted for the original validation.
 - **metafor** (`bench/reference_metafor.R`) analyses the same data (variance = the square of the SE the app was given):
 
   | App | metafor |
@@ -116,7 +192,7 @@ univariate model is lost.
 
 | Path | Contents |
 |---|---|
-| `app/` | The app, byte-identical to the validated allmeta commit |
+| `app/` | The app, byte-identical to the allmeta v1.8.0 source files |
 | `corpus/` | The corpus (`corpus.csv`), the log of every metadat help page, and its summary |
 | `bench/build_corpus.py`, `capture_one.R`, `assemble_corpus.R` | Build the corpus from metadat's examples |
 | `bench/reference_metafor.R` | metafor reference analyses |
@@ -165,8 +241,11 @@ paper cites every one. `dat.colditz1994` repeats `dat.bcg` (metadat ships both) 
 
 ## Cite
 
-Ahmad M. Heterogeneity in meta-analysis in the browser: a tool validated against the R package metafor [software], v1.0.0. Zenodo;
-2026. doi:[10.5281/zenodo.23415772](https://doi.org/10.5281/zenodo.23415772). Machine-readable metadata: `CITATION.cff`.
+Ahmad M. Heterogeneity in meta-analysis in the browser: a tool validated against the R package metafor [software], v1.1.0.
+2026. [Repository](https://github.com/mahmood726-cyber/heterogeneity-reproducible).
+The v1.1.0 archive DOI is pending assignment; the retained prior-release DOI
+[10.5281/zenodo.23415772](https://doi.org/10.5281/zenodo.23415772) identifies **v1.0.0**.
+Machine-readable metadata: `CITATION.cff`.
 
 ## Licence
 

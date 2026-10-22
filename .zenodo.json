@@ -1,6 +1,6 @@
 {
   "title": "Heterogeneity in meta-analysis in the browser: a tool validated against the R package metafor",
-  "description": "The allmeta heterogeneity app (validated at allmeta commit 7cb5975, the merge of PR #82) and a one-command validation against the R package metafor 5.2-1 on every random- or fixed-effects model without moderators fitted in the help-page examples of metadat 1.6-0: 88 meta-analyses from 49 datasets (2,241 study rows, 4 to 160 studies), each with all eight tau^2 estimators the app offers (Paule-Mandel, REML, ML, empirical Bayes, Sidik-Jonkman, Hedges, Hunter-Schmidt, DerSimonian-Laird). The app reports Q, I^2 with Q-profile confidence intervals for tau^2 and I^2, the pooled estimate with normal and Hartung-Knapp-Sidik-Jonkman intervals, the prediction interval, leave-one-out results and a Baujat plot. All 131,781 checks pass: every reported number agrees with metafor within 1e-9 and both treat the same 28 analyses as refused (DerSimonian-Laird with fewer than 10 studies). Includes the corpus builder, the committed corpus, the metafor reference analyses, the runner that drives the app itself in headless Chromium, the analysis that regenerates the article's tables, figures and statistics with a PASS/FAIL check of every number, a Docker image (canonical environment: R 4.6.0, metafor 5.2-1, metadat 1.6-0, Node 24.15.0, Playwright 1.63.0) and CI on Linux, Windows, macOS and Docker. Earlier app versions had known issues, fixed in allmeta PR #82 (see CHANGELOG.md).",
+  "description": "Archive v1.1.0 (2026-10-22) validates the original heterogeneity validation for the byte-exact allmeta v1.8.0 app at commit 1cb3f8409c7af75ed41f7e1811f9c502f900fc79 (release DOI 10.5281/zenodo.23515177; concept DOI 10.5281/zenodo.20516880). New in this archive: the updated app and recursively required assets, portable Windows run plan, SHA-256 inventories, and display-card lookups adapted to the current labels. The original corpus, reference R code, expected values, and numerical tolerances are unchanged: metafor 5.2-1 with metadat 1.6-0; 88 meta-analyses, 49 datasets, 2,241 study rows, eight estimators, 704 configurations, and an expected 131,781 numerical checks plus 120,720 original displayed-number checks. The final 2026-10-22 release run passed (RUN_EXIT 0). Quick: 4934/4934 numerical, 4480/4480 display, 11/11 expected values. Full: 131781/131781 numerical, 120720/120720 display, 44/44 expected values. Display failures: 0 in both modes; no expected count differs. R 4.6.0 (metafor 5.2.1, metadat 1.6.0), Node 24.16.0 (Playwright 1.59.1), Python 3.13.13, Windows AMD64; Chromium 148.0.7778.96. Tool-version deviations were permitted with --allow-version-mismatch and are recorded in RECUT_NOTES.md and provenance/run_plan-2026-10-22-release.log; desktop R/metafor/metadat pins were enforced. This records a Windows runner pass, not a new canonical Docker or cross-platform pass. APP.txt specifies no numerical plus suite for heterogeneity (PR #163: strict numeric input usability). The optional in-page stored-reference replay and live webR dependency bundle are included as app assets; the bundled webR metafor 4.8-0 is distinct from the desktop validation reference metafor 5.2-1. Includes the corpus builder, original reference and analysis scripts, historical paper artifacts, Docker setup, and CI configuration. The earlier v1.0.0 validation targeted allmeta commit 7cb5975429531791d1879e80cf5c05f765e82c21 (PR #82).",
   "upload_type": "software",
   "license": "MIT",
   "access_right": "open",
@@ -35,7 +35,18 @@
       "identifier": "10.5281/zenodo.23288388",
       "relation": "isDerivedFrom",
       "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.23415772",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.23515177",
+      "relation": "isDerivedFrom",
+      "scheme": "doi"
     }
   ],
-  "version": "1.0.0"
+  "version": "1.1.0",
+  "publication_date": "2026-10-22"
 }

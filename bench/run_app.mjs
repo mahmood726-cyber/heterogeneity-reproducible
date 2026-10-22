@@ -11,7 +11,10 @@ import { readFileSync, writeFileSync } from "fs";
 import { createHash } from "crypto";
 import { dirname, join, resolve } from "path";
 import { fileURLToPath, pathToFileURL } from "url";
-import { chromium } from "playwright";
+// Optional external package directory, supplied by the runner; default remains the pinned local install.
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE
+  ? pathToFileURL(resolve(process.env.PLAYWRIGHT_MODULE, "index.mjs")).href
+  : "playwright");
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const PAGE = pathToFileURL(resolve(ROOT, "app", "heterogeneity", "index.html")).href;
@@ -73,14 +76,18 @@ for (const id of ids) {
     const used = C["τ² used"] || "";
     chk("tau2used", used, [res.tau2], [4]);
     if (!used.includes(`(${res.estimator.toUpperCase()})`)) fails.push(`tau2used names ${used} for ${res.estimator}`);
-    chk("I2", C["I²"], [S.I2, res.qpci.I2Lo, res.qpci.I2Hi], [1, 1, 1]);
+    // v1.8.0 separates the Q-based point from the model-based interval card.
+    // Keep the original three checks and count; the new model-based point is outside this audit.
+    chk("I2", C["I² (Q-based)"], [S.I2], [1]);
+    chk("I2CI", nums(C["I² (model-based)"] || "").slice(1).join(" "),
+        [res.qpci.I2Lo, res.qpci.I2Hi], [1, 1]);
     chk("tau2CI", C["τ² 95% CI (Q-profile)"], [res.qpci.tau2Lo, res.qpci.tau2Hi], [4, 4]);
     chk("tau2PM", C["τ² (PM)"], [res.tauEstimates.pm], [4]);
     chk("tau2REML", C["τ² (REML)"], [res.tauEstimates.reml], [4]);
     if (res.tauEstimates.dl != null) chk("tau2DL", C["τ² (DL)"], [res.tauEstimates.dl], [4]);
     chk("REz", C["RE pooled (z)"], [S.mu, S.ciLo, S.ciHi], [3, 3, 3]);
-    chk("REhk", C["RE pooled (HKSJ + t)"], [S.mu, S.ciLoHKSJ, S.ciHiHKSJ], [3, 3, 3]);
-    chk("PI", C["95% PI"], [res.pi.lo, res.pi.hi], [3, 3]);
+    chk("REhk", C["RE pooled (modified HK + t)"], [S.mu, S.ciLoHKSJ, S.ciHiHKSJ], [3, 3, 3]);
+    chk("PI", C["95% PI (model SE + t)"], [res.pi.lo, res.pi.hi], [3, 3]);
     res.loo.forEach((r, i) => {
       const t = shown.loo[i] || [];
       if (String(r.k) !== t[1]) fails.push(`loo[${i}].k`);

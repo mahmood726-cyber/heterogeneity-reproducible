@@ -1,0 +1,827 @@
+{
+  "source_repository": "https://github.com/mahmood726-cyber/allmeta",
+  "tag": "v1.8.0",
+  "commit": "1cb3f8409c7af75ed41f7e1811f9c502f900fc79",
+  "release_doi": "10.5281/zenodo.23515177",
+  "concept_doi": "10.5281/zenodo.20516880",
+  "files": [
+    {
+      "path": "app/heterogeneity/index.html",
+      "status": "changed",
+      "reason": "existing archived app file"
+    },
+    {
+      "path": "app/heterogeneity/validate/MANIFEST.json",
+      "status": "added",
+      "reason": "unchanged upstream corpus hash contract"
+    },
+    {
+      "path": "app/heterogeneity/validate/adapter.js",
+      "status": "added",
+      "reason": "page script"
+    },
+    {
+      "path": "app/heterogeneity/validate/corpus/corpus.json",
+      "status": "added",
+      "reason": "adapter corpus fetch via AlmValidate"
+    },
+    {
+      "path": "app/heterogeneity/validate/corpus/reference.json",
+      "status": "added",
+      "reason": "adapter corpus fetch via AlmValidate"
+    },
+    {
+      "path": "app/hub/app-style.css",
+      "status": "changed",
+      "reason": "existing archived app file; page link"
+    },
+    {
+      "path": "app/hub/shared/a11y-landmarks.js",
+      "status": "unchanged",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/hub/shared/analysis-lifecycle.js",
+      "status": "added",
+      "reason": "page script"
+    },
+    {
+      "path": "app/hub/shared/axis-controls.js",
+      "status": "unchanged",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/hub/shared/csv-upload.js",
+      "status": "changed",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/hub/shared/glossary.ar.json",
+      "status": "added",
+      "reason": "tooltips opts.src and language variants"
+    },
+    {
+      "path": "app/hub/shared/glossary.es.json",
+      "status": "added",
+      "reason": "tooltips opts.src and language variants"
+    },
+    {
+      "path": "app/hub/shared/glossary.json",
+      "status": "added",
+      "reason": "tooltips opts.src and language variants"
+    },
+    {
+      "path": "app/hub/shared/glossary.zh.json",
+      "status": "added",
+      "reason": "tooltips opts.src and language variants"
+    },
+    {
+      "path": "app/hub/shared/plot-export.js",
+      "status": "added",
+      "reason": "page script"
+    },
+    {
+      "path": "app/hub/shared/reset-undo.js",
+      "status": "unchanged",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/hub/shared/results-export.js",
+      "status": "changed",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/hub/shared/tooltips.js",
+      "status": "unchanged",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/hub/shared/url-state.js",
+      "status": "changed",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/hub/shared/vendor/jspdf.min.js",
+      "status": "added",
+      "reason": "script-relative URL in hub/shared/plot-export.js"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/R.js",
+      "status": "added",
+      "reason": "lazy webR runtime"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/R.wasm",
+      "status": "added",
+      "reason": "lazy webR runtime"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/libRblas.so",
+      "status": "added",
+      "reason": "lazy webR runtime"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/libRlapack.so",
+      "status": "added",
+      "reason": "lazy webR runtime"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/library.data.gz",
+      "status": "added",
+      "reason": "lazy webR runtime"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/library.js.metadata",
+      "status": "added",
+      "reason": "lazy webR runtime"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/Matrix/Matrix_1.7-5.tgz",
+      "status": "added",
+      "reason": "live metafor dependency Matrix"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/lattice/lattice_0.22-9.tgz",
+      "status": "added",
+      "reason": "live metafor dependency lattice"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/mathjaxr/mathjaxr_2.0-0.tgz",
+      "status": "added",
+      "reason": "live metafor dependency mathjaxr"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/metadat/metadat_1.4-0.tgz",
+      "status": "added",
+      "reason": "live metafor dependency metadat"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/metafor/metafor_4.8-0.tgz",
+      "status": "added",
+      "reason": "live metafor dependency metafor"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/nlme/nlme_3.1-169.tgz",
+      "status": "added",
+      "reason": "live metafor dependency nlme"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/numDeriv/numDeriv_2016.8-1.1.tgz",
+      "status": "added",
+      "reason": "live metafor dependency numDeriv"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/packages/pbapply/pbapply_1.7-4.tgz",
+      "status": "added",
+      "reason": "live metafor dependency pbapply"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/repo/bin/emscripten/contrib/4.5/digest_0.6.39.tgz",
+      "status": "added",
+      "reason": "live metafor dependency digest"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/repo/manifest.json",
+      "status": "added",
+      "reason": "webR package manifest (copied intact)"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/etc/fonts/fonts.conf",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/etc/ssl/cert.pem",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/doc.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/doc.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/demo.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/demo.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/help.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/help.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/html.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/base/html.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/help.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/help.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/html.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/compiler/html.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/help.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/help.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/html.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/datasets/html.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/afm.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/afm.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/demo.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/demo.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/enc.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/enc.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/fonts.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/fonts.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/help.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/help.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/html.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/html.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/libs.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grDevices/libs.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/demo.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/demo.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/help.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/help.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/html.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/graphics/html.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/doc.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/doc.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/help.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/help.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/html.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/grid/html.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/help.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/help.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/html.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/methods/html.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/parallel.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/parallel.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/help.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/help.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/html.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/splines/html.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/demo.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/demo.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/doc.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/doc.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/help.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/help.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/html.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats/html.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/help.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/help.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/html.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/stats4/html.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/tcltk.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/tcltk.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/help.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/help.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/html.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/tools/html.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/translations.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/translations.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/translations/DESCRIPTION",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/doc.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/doc.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/help.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/help.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/html.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/html.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/misc.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/utils/misc.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/help.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/help.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/html.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/library/webr/html.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/share.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/lib/R/share.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Bold.ttf",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-BoldItalic.ttf",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Italic.ttf",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSans-Regular.ttf",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSansMono-Bold.ttf",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSansMono-Regular.ttf",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-Bold.ttf",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-BoldItalic.ttf",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-Italic.ttf",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/fonts/NotoSerif-Regular.ttf",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/gdal.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/gdal.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/proj.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/proj.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/udunits.data.gz",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/usr/share/udunits.js.metadata",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/var/cache/fontconfig/3830d5c3ddfd5cd38a049b759396e72e-le32d8.cache-9",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/vfs/var/cache/fontconfig/CACHEDIR.TAG",
+      "status": "added",
+      "reason": "webR virtual filesystem and lazy data"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/webr-worker.js",
+      "status": "added",
+      "reason": "lazy webR runtime"
+    },
+    {
+      "path": "app/r-shiny/shinylive/webr/webr.mjs",
+      "status": "added",
+      "reason": "lazy webR runtime"
+    },
+    {
+      "path": "app/shared/alm-validate.js",
+      "status": "added",
+      "reason": "page script"
+    },
+    {
+      "path": "app/shared/app-flow.js",
+      "status": "unchanged",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/shared/autosave.js",
+      "status": "unchanged",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/shared/build-info.js",
+      "status": "changed",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/shared/canonical-datasets.js",
+      "status": "changed",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/shared/citation.js",
+      "status": "unchanged",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/shared/forced-colors.css",
+      "status": "changed",
+      "reason": "existing archived app file; page link"
+    },
+    {
+      "path": "app/shared/hero-examples.js",
+      "status": "changed",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/shared/heterogeneity-ci.js",
+      "status": "unchanged",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/shared/ma-core.js",
+      "status": "changed",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/shared/ma-pooled-v1.js",
+      "status": "unchanged",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/shared/ma-studies-v1.js",
+      "status": "unchanged",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/shared/toast.js",
+      "status": "unchanged",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/shared/truthcert-export.js",
+      "status": "unchanged",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/shared/truthcert-ui.js",
+      "status": "unchanged",
+      "reason": "existing archived app file; page script"
+    },
+    {
+      "path": "app/shared/webr-runner.js",
+      "status": "added",
+      "reason": "script-relative URL in shared/alm-validate.js"
+    }
+  ],
+  "removed": [],
+  "scope": "Existing app snapshot plus page script/link dependencies, glossary variants, adapter corpus, plot PDF vendor, lazy webR runtime/VFS and metafor dependency closure. Navigation to sibling apps is outside this snapshot.",
+  "webR_packages": [
+    "Matrix",
+    "digest",
+    "lattice",
+    "mathjaxr",
+    "metadat",
+    "metafor",
+    "nlme",
+    "numDeriv",
+    "pbapply"
+  ]
+}
